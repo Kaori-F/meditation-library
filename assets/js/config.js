@@ -27,12 +27,12 @@ const CONFIG = {
   // ---- 観られる場所（URLを入れると自動でボタンが有効になります）----
   // YouTube / Spotify のURLを入れてください。空のあいだは「準備中」表示。
   listen: {
-    youtube: "",   // 例: "https://www.youtube.com/@xxxx"  または該当動画URL
-    spotify: ""    // 例: "https://open.spotify.com/show/xxxx"
+    youtube: "https://www.youtube.com/playlist?list=PLEEecFQkYP2s",
+    spotify: "https://open.spotify.com/show/033zGt62HYoAMNugfLNeeC"
   },
 
   // ---- ポートフォリオサイト（連携できたらURLを入れる。空なら非表示）----
-  portfolioUrl: "",
+  portfolioUrl: "https://portfolio-kappa-virid-29.vercel.app/",
 
   // ---- クリエイターリンク（URLを入れたものだけ表示されます）----
   creatorLinks: [
@@ -57,8 +57,7 @@ const CONFIG = {
       titleEn: "The Path to Meeting Your True Self",
       date: "2026.6.19 20:00",
       status: "soon",
-      // ↓ カバー写真.png を置いたら "assets/img/カバー写真.png" に差し替え
-      poster: "assets/img/hero_cosmos.jpg",
+      poster: "assets/img/ep01_true_self.png",
       links: { youtube: "", spotify: "" }
     }
     /* 追加例：
@@ -80,14 +79,14 @@ const CONFIG = {
       titleJa: "How to Walk", titleEn: "How to Walk",
       noteJa: "歩く、ということ", noteEn: "On walking",
       src: "assets/video/ep01_how_to_walk.mp4",
-      poster: "assets/img/world_light.jpg",
+      poster: "assets/img/how_to_walk_cover.jpeg",
       vertical: false, duration: "0:49"
     },
     {
       titleJa: "食事は護摩焚き", titleEn: "Eating as Sacred Fire",
       noteJa: "食べることは、祈ること", noteEn: "Eating as a quiet ritual",
       src: "assets/video/ep02_gomataki.mp4",
-      poster: "assets/img/ep02_poster.jpg",
+      poster: "assets/img/gomataki_cover.jpeg",
       vertical: true, duration: "1:22"
     },
     {

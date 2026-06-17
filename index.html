@@ -182,7 +182,9 @@
       <div class="creator-links" id="creatorLinks"><!-- JSで生成 --></div>
       <p class="portfolio-wrap"><a class="portfolio-link" id="portfolioLink" hidden target="_blank" rel="noopener" data-i18n="creator.portfolio">ポートフォリオを見る</a></p>
 
-      <div class="notify" id="notify">
+      <!-- メール登録フォーム：formActionが未設定のため現在は非表示。
+           復活させるときは下の hidden を外し、config.js の formAction にURLを入れる -->
+      <div class="notify" id="notify" hidden>
         <p class="kicker gold" data-i18n="notify.kicker">新章のはじまりを、お知らせします</p>
         <p class="notify-body" data-i18n="notify.body">6.19の配信を、静かにお知らせします。</p>
         <form class="notify-form" id="notifyForm">
