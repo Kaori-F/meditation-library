@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 *.code-workspace
+
+# 一時確認ファイル
+_mobilecheck_*.png

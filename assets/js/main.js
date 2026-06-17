@@ -37,10 +37,13 @@
   const heroBg = document.getElementById("heroBg");
   const heroImgs = (CONFIG.coverImage ? [CONFIG.coverImage] : (CONFIG.heroSlides || []));
   heroBg.innerHTML = "";
-  heroImgs.forEach((src, i) => {
+  heroImgs.forEach((item, i) => {
+    const src = (typeof item === "string") ? item : item.src;
+    const pos = (typeof item === "string") ? "center" : (item.pos || "center");
     const img = document.createElement("img");
     img.src = src;
     img.alt = "";
+    img.style.objectPosition = pos;
     img.className = "hero-slide" + (i === 0 ? " is-active" : "");
     heroBg.appendChild(img);
   });
@@ -53,7 +56,7 @@
       slides[slideIdx].classList.remove("is-active");
       slideIdx = (slideIdx + 1) % slides.length;
       slides[slideIdx].classList.add("is-active");
-    }, 6500);
+    }, 8000); // 8秒ごと（瞑想的な間）。リロード時は必ず先頭(index 0)から
   }
 
   /* ---------- 日付・タイトルの差し込み（config / 言語連動） ---------- */

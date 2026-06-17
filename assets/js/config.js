@@ -12,11 +12,15 @@ const CONFIG = {
   // 空のあいだは、下の heroSlides（既存画像）が表示されます。
   coverImage: "",
 
-  // ---- ヒーロー背景（カバー未設定のときに使う既存画像。順に切り替わる）----
+  // ---- ヒーロー背景（この順にゆっくりフェードで切り替わる。先頭が必ず最初に表示）----
+  // pos はスマホ等で切り取られるときの表示位置（主役が切れないよう調整）
   heroSlides: [
-    "assets/img/hero_cosmos.jpg",
-    "assets/img/hero_dusk.jpg",
-    "assets/img/hero_torii.jpg"
+    { src: "assets/img/hero_01.jpg", pos: "center" },     // 1. ランタンのトンネル（先頭・最初に必ず表示）
+    { src: "assets/img/hero_02.jpg", pos: "center" },     // 2. 大聖堂の窓と星空を見上げる
+    { src: "assets/img/hero_03.jpg", pos: "72% center" }, // 3. 朝の光が差す窓辺（主役が右寄り）
+    { src: "assets/img/hero_04.jpg", pos: "center" },     // 4. 本が宙に浮かぶ幻想的な図書館
+    { src: "assets/img/hero_05.jpg", pos: "center" },     // 5. 書棚の前に立つ親密な情景
+    { src: "assets/img/hero_06.jpg", pos: "34% center" }  // 6. 草原で満月の下、本を読む（主役が左寄り）
   ],
 
   // ---- 新章 第1夜の配信日時（JST）----
