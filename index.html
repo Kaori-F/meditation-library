@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>瞑想図書館 ── 眠る前の小さな絵本 | The Meditation Library</title>
+<meta name="description" content="今日を閉じる前に、一冊だけ。眠りの前にひらく、絵本のかたちをした瞑想の時間。ナマケモノの歩く速さで「見えない世界」のページをめくるビデオポッドキャスト。新章 第1夜「ほんとうの自分に出会う道」2026.6.19 20:00 配信。">
+<meta property="og:title" content="瞑想図書館 ── 眠る前の小さな絵本">
+<meta property="og:description" content="今日を閉じる前に、一冊だけ。新章 第1夜「ほんとうの自分に出会う道」2026.6.19 20:00 配信。">
+<meta property="og:image" content="assets/img/hero_cosmos.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-lang="ja">
+
+<!-- 星空レイヤー（夜が深まるほど現れる） -->
+<div class="stars" aria-hidden="true"></div>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <a class="brand" href="#top">瞑想図書館</a>
+  <nav class="nav">
+    <a href="#concept" data-i18n="nav.concept">図書館について</a>
+    <a href="#luna" data-i18n="nav.luna">夜の司書</a>
+    <a href="#premiere" data-i18n="nav.shincho">新章</a>
+    <a href="#archive" data-i18n="nav.archive">アーカイブ</a>
+  </nav>
+  <button class="lang-toggle" id="langToggle" data-i18n="lang.toggle">EN</button>
+</header>
+
+<main id="top">
+
+  <!-- ═══════════ ヒーロー：図書館の扉 ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"><!-- JSで生成（カバー画像 or 既存画像） --></div>
+    <div class="hero-veil"></div>
+    <div class="hero-inner">
+      <p class="hero-kicker" data-i18n="hero.kicker">ビデオポッドキャスト</p>
+      <h1 class="hero-title" data-i18n="hero.title">瞑想図書館</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">眠る前の小さな絵本</p>
+      <p class="hero-en">The Meditation Library</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">今日を閉じる前に、一冊だけ。</p>
+      <p class="hero-premiere">
+        <span class="hero-date" id="heroDate">2026.6.19 20:00</span>
+        <span class="hero-ep" data-i18n="hero.ep">新章 第1夜 配信</span>
+      </p>
+    </div>
+    <a class="scroll-cue" href="#concept">
+      <span data-i18n="hero.scroll">下へ — 本を開く</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ═══════════ 図書館について（入り口） ═══════════ -->
+  <section class="section concept" id="concept" data-zone="light">
+    <div class="container narrow">
+      <p class="kicker" data-i18n="concept.kicker">図書館について</p>
+      <div class="poem reveal">
+        <p data-i18n="concept.line1">一日のおわり。</p>
+        <p data-i18n="concept.line2">灯りをひとつ落として、ページをめくる。</p>
+      </div>
+      <div class="poem reveal">
+        <p data-i18n="concept.line3">ここは、眠りの前にひらく小さな図書館。</p>
+        <p class="poem-em" data-i18n="concept.line4">絵本のかたちをした、瞑想の時間です。</p>
+      </div>
+      <div class="poem reveal">
+        <p data-i18n="concept.line5">目に見えるものだけが、世界のすべてじゃない。</p>
+        <p data-i18n="concept.line6">ナマケモノの歩く速さで、</p>
+        <p data-i18n="concept.line7">「見えない世界」のページを、いっしょにめくっていきます。</p>
+      </div>
+      <figure class="concept-fig reveal">
+        <img src="assets/img/world_light.jpg" alt="木漏れ日の参道を歩くルナすろーす" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══════════ 本を開く（演出） ═══════════ -->
+  <section class="openbook" id="openbook" data-zone="dusk">
+    <div class="openbook-glow" aria-hidden="true"></div>
+    <svg class="openbook-icon" viewBox="0 0 200 150" aria-hidden="true">
+      <!-- 開いた本 -->
+      <path d="M100 36 C76 22 44 22 22 30 L22 120 C44 112 76 112 100 126 Z"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 36 C124 22 156 22 178 30 L178 120 C156 112 124 112 100 126 Z"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="100" y1="36" x2="100" y2="126" stroke="currentColor" stroke-width="3"/>
+      <!-- ページの行 -->
+      <path d="M38 48 C58 43 76 44 92 52 M38 64 C58 59 76 60 92 68 M38 80 C58 75 76 76 92 84"
+            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+      <path d="M162 48 C142 43 124 44 108 52 M162 64 C142 59 124 60 108 68 M162 80 C142 75 124 76 108 84"
+            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+    </svg>
+    <p class="openbook-line reveal" data-i18n="openbook.line">それでは、本を開きましょう</p>
+    <p class="openbook-sub reveal" data-i18n="openbook.sub">ゆっくり、ひと呼吸おいて</p>
+  </section>
+
+  <!-- ═══════════ 夜の司書（ルナすろーす） ═══════════ -->
+  <section class="section luna" id="luna" data-zone="dusk">
+    <div class="container split">
+      <figure class="luna-fig reveal">
+        <img src="assets/img/luna_closeup.jpg" alt="ルナすろーす" loading="lazy">
+      </figure>
+      <div class="luna-text">
+        <p class="kicker" data-i18n="luna.kicker">夜の司書</p>
+        <h2 class="h2">
+          <span data-i18n="luna.name">ルナすろーす</span>
+          <small class="name-note" data-i18n="luna.note">（なまえは、まだ仮のもの）</small>
+        </h2>
+        <div class="poem reveal">
+          <p data-i18n="luna.body1">ピンクのうさぎの着ぐるみを着た、ナマケモノ。</p>
+          <p data-i18n="luna.body2">ゆっくり歩いて、ゆっくり読んで、ゆっくり気づく。</p>
+          <p data-i18n="luna.body3">急がないから、見えてくるものがある。</p>
+          <p data-i18n="luna.body4">月のひかりのような声で、眠りの前の一冊を読み聞かせます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 新章 ── 絵本シリーズ（カウントダウン） ═══════════ -->
+  <section class="section premiere" id="premiere" data-zone="night">
+    <div class="premiere-glow" aria-hidden="true"></div>
+    <div class="container narrow center">
+      <p class="kicker gold" data-i18n="premiere.kicker">新章 ── 絵本シリーズ</p>
+      <p class="premiere-lead reveal" data-i18n="premiere.lead">第1夜、はじまります。</p>
+      <h2 class="premiere-eptitle" id="premiereEpTitle">ほんとうの自分に出会う道</h2>
+      <p class="premiere-date" id="premiereDate">2026.6.19 20:00</p>
+      <p class="premiere-note reveal" data-i18n="premiere.note">甲子の日 — 六十干支のはじまり。新しいことを始めるのに、いちばん良い夜。</p>
+
+      <div class="countdown" id="countdown" role="timer">
+        <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-label" data-i18n="cd.days">日</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-label" data-i18n="cd.hours">時間</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cdMins">--</span><span class="cd-label" data-i18n="cd.mins">分</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cdSecs">--</span><span class="cd-label" data-i18n="cd.secs">秒</span></div>
+      </div>
+      <p class="premiere-live" id="premiereLive" data-i18n="premiere.live" hidden>新章が、はじまりました</p>
+
+      <!-- 観られる場所 -->
+      <p class="kicker gold listen-kicker" data-i18n="listen.kicker">観られる場所</p>
+      <div class="listen-grid" id="listenGrid"><!-- JSで生成 --></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 絵本だな ═══════════ -->
+  <section class="section episodes" id="episodes" data-zone="night">
+    <div class="container">
+      <p class="kicker gold" data-i18n="episodes.kicker">絵本だな</p>
+      <p class="section-note" data-i18n="episodes.note">夜ごとに、一冊ずつ増えていきます。</p>
+      <div class="episode-grid" id="episodeGrid"><!-- JSで生成 --></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ これまでの作品（アーカイブ） ═══════════ -->
+  <section class="section showreel" id="archive" data-zone="night">
+    <div class="container">
+      <p class="kicker gold" data-i18n="archive.kicker">これまでの作品</p>
+      <p class="section-note" data-i18n="archive.note">この図書館にたどり着くまでの、小さな映像たち。</p>
+      <div class="reel-grid" id="reelGrid"><!-- JSで生成 --></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ クリエイター＆通知 ═══════════ -->
+  <section class="section creator" id="creator" data-zone="night">
+    <div class="container narrow center">
+      <p class="kicker gold" data-i18n="creator.kicker">つくっているひと</p>
+      <h2 class="h2" data-i18n="creator.name">Kaori</h2>
+      <div class="poem reveal">
+        <p data-i18n="creator.body1">アートを通じて「目に見えない世界の法則」を表現する探求者。</p>
+        <p data-i18n="creator.body2">イラスト・アニメーション・NFT。すべての制作は、精神世界への理解を深めるための旅です。</p>
+      </div>
+      <div class="creator-links" id="creatorLinks"><!-- JSで生成 --></div>
+      <p class="portfolio-wrap"><a class="portfolio-link" id="portfolioLink" hidden target="_blank" rel="noopener" data-i18n="creator.portfolio">ポートフォリオを見る</a></p>
+
+      <div class="notify" id="notify">
+        <p class="kicker gold" data-i18n="notify.kicker">新章のはじまりを、お知らせします</p>
+        <p class="notify-body" data-i18n="notify.body">6.19の配信を、静かにお知らせします。</p>
+        <form class="notify-form" id="notifyForm">
+          <input type="email" id="notifyEmail" name="email" required data-i18n-placeholder="notify.placeholder" placeholder="メールアドレス">
+          <button type="submit" data-i18n="notify.submit">登録する</button>
+        </form>
+        <p class="notify-msg" id="notifyMsg" hidden></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-zone="night">
+  <svg class="footer-book" viewBox="0 0 200 150" aria-hidden="true">
+    <path d="M100 36 C76 22 44 22 22 30 L22 120 C44 112 76 112 100 126 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M100 36 C124 22 156 22 178 30 L178 120 C156 112 124 112 100 126 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="100" y1="36" x2="100" y2="126" stroke="currentColor" stroke-width="4"/>
+  </svg>
+  <p class="footer-note" data-i18n="footer.note">「ルナすろーす」は仮の名前です。ほんとうの名前は、まだ見えない世界で眠っています。</p>
+  <p class="footer-copy">© 2026 瞑想図書館 / The Meditation Library</p>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
