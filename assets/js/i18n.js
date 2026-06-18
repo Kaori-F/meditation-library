@@ -39,10 +39,8 @@ const I18N = {
     "luna.kicker": "",
     "luna.name": "ルナすろーす",
     "luna.note": "（なまえは、まだ仮のもの）",
-    "luna.body1": "ルナは、導き手でも先生でもありません。あなたの分身であり、かつての——いまも途上の——わたし自身です。",
-    "luna.body2": "現状を変えたいと願いながら、まだ目覚めきっていない。あなたと同じ、ふつうの人。",
-    "luna.body3": "それでも夜ごと、小さな所作をひとつずつ。道の途中を、ただ歩いています。",
-    "luna.body4": "ピンクの着ぐるみは、効率や外向きの「よけいなもの」。すきとおった体が、本来の自分のかたち。",
+    "luna.body1": "ルナすろーすは、導き手でも先生でもありません。あなたの分身であり、かつての——いまも途上の——わたし自身です。",
+    "luna.body3": "夜ごと、ひとつずつ。道の途中を、ただ歩いています。",
 
     // 新章 ── 絵本シリーズ
     "premiere.kicker": "新章 ── 絵本シリーズ",
@@ -117,10 +115,8 @@ const I18N = {
     "luna.kicker": "",
     "luna.name": "Luna Sloth",
     "luna.note": "(a provisional name)",
-    "luna.body1": "Luna is not a guide, nor a teacher. She is your other self — and the author as she once was, and still is, somewhere along the way.",
-    "luna.body2": "Someone who longs to change things, not yet fully awake. An ordinary person, just like you.",
-    "luna.body3": "And still, night after night, one small gesture at a time. She is simply walking the path.",
-    "luna.body4": "The pink costume is the excess — efficiency, the outward self. The see-through body is who she truly is.",
+    "luna.body1": "Luna Sloth is not a guide, nor a teacher. She is your other self — and the author as she once was, and still is, somewhere along the way.",
+    "luna.body3": "Night after night, one thing at a time. She is simply walking the path.",
 
     "premiere.kicker": "New Chapter ── The Picture Book Series",
     "premiere.lead": "Night 0 begins.",
