@@ -23,7 +23,7 @@ const CONFIG = {
     { src: "assets/img/hero_06.jpg", pos: "34% center" }  // 6. 草原で満月の下、本を読む（主役が左寄り）
   ],
 
-  // ---- 新章 第1夜の配信日時（JST）----
+  // ---- 新章 第0夜（序章）の配信日時（JST）----
   premiereDate: "2026-06-19T20:00:00+09:00",
   premiereLabelJa: "2026.6.19 20:00",
   premiereLabelEn: "June 19, 2026 20:00 JST",
@@ -56,7 +56,8 @@ const CONFIG = {
   // status: "soon"（配信前） / "live"（配信中）
   episodes: [
     {
-      num: "第 1 夜",
+      num: "第 0 夜",
+      // ↑ 序章・本編の入口。絵本スタイル第1作「皿洗い」が第1夜になる
       titleJa: "ほんとうの自分に出会う道",
       titleEn: "The Path to Meeting Your True Self",
       date: "2026.6.19 20:00",

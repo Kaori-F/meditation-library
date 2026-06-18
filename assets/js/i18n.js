@@ -8,7 +8,7 @@ const I18N = {
   ja: {
     // メタ・ナビ
     "nav.concept": "図書館について",
-    "nav.luna": "夜の司書",
+    "nav.luna": "ルナすろーす",
     "nav.shincho": "新章",
     "nav.archive": "アーカイブ",
     "lang.toggle": "EN",
@@ -19,7 +19,7 @@ const I18N = {
     "hero.subtitle": "眠る前の小さな絵本",
     "hero.tagline": "今日を閉じる前に、一冊だけ。",
     "hero.scroll": "下へ — 本を開く",
-    "hero.ep": "新章 第1夜 配信",
+    "hero.ep": "新章 第0夜 配信",
 
     // 図書館について（入り口）
     "concept.kicker": "図書館について",
@@ -35,18 +35,18 @@ const I18N = {
     "openbook.line": "それでは、本を開きましょう",
     "openbook.sub": "ゆっくり、ひと呼吸おいて",
 
-    // 夜の司書（ルナすろーす）
-    "luna.kicker": "夜の司書",
+    // ルナすろーす（紹介）
+    "luna.kicker": "",
     "luna.name": "ルナすろーす",
     "luna.note": "（なまえは、まだ仮のもの）",
-    "luna.body1": "ピンクのうさぎの着ぐるみを着た、ナマケモノ。",
-    "luna.body2": "ゆっくり歩いて、ゆっくり読んで、ゆっくり気づく。",
-    "luna.body3": "急がないから、見えてくるものがある。",
-    "luna.body4": "月のひかりのような声で、眠りの前の一冊を読み聞かせます。",
+    "luna.body1": "ルナは、導き手でも先生でもありません。あなたの分身であり、かつての——いまも途上の——わたし自身です。",
+    "luna.body2": "現状を変えたいと願いながら、まだ目覚めきっていない。あなたと同じ、ふつうの人。",
+    "luna.body3": "それでも夜ごと、小さな所作をひとつずつ。道の途中を、ただ歩いています。",
+    "luna.body4": "ピンクの着ぐるみは、効率や外向きの「よけいなもの」。すきとおった体が、本来の自分のかたち。",
 
     // 新章 ── 絵本シリーズ
     "premiere.kicker": "新章 ── 絵本シリーズ",
-    "premiere.lead": "第1夜、はじまります。",
+    "premiere.lead": "第0夜、はじまります。",
     "premiere.note": "甲子の日 — 六十干支のはじまり。新しいことを始めるのに、いちばん良い夜。",
     "premiere.live": "新章が、はじまりました",
     "cd.days": "日",
@@ -90,7 +90,7 @@ const I18N = {
 
   en: {
     "nav.concept": "The Library",
-    "nav.luna": "The Librarian",
+    "nav.luna": "Luna Sloth",
     "nav.shincho": "New Chapter",
     "nav.archive": "Archive",
     "lang.toggle": "日本語",
@@ -100,7 +100,7 @@ const I18N = {
     "hero.subtitle": "A Little Picture Book Before Sleep",
     "hero.tagline": "Before you close the day — just one book.",
     "hero.scroll": "Scroll — open the book",
-    "hero.ep": "New Chapter, First Night",
+    "hero.ep": "New Chapter, Night 0",
 
     "concept.kicker": "The Library",
     "concept.line1": "The end of a day.",
@@ -114,16 +114,16 @@ const I18N = {
     "openbook.line": "Now, let us open the book",
     "openbook.sub": "Slowly — take one breath",
 
-    "luna.kicker": "The night librarian",
+    "luna.kicker": "",
     "luna.name": "Luna Sloth",
     "luna.note": "(a provisional name)",
-    "luna.body1": "A sloth in a pink rabbit costume.",
-    "luna.body2": "Walks slowly, reads slowly, notices slowly.",
-    "luna.body3": "Because she never hurries, things come into view.",
-    "luna.body4": "In a voice pale as moonlight, she reads you one book before sleep.",
+    "luna.body1": "Luna is not a guide, nor a teacher. She is your other self — and the author as she once was, and still is, somewhere along the way.",
+    "luna.body2": "Someone who longs to change things, not yet fully awake. An ordinary person, just like you.",
+    "luna.body3": "And still, night after night, one small gesture at a time. She is simply walking the path.",
+    "luna.body4": "The pink costume is the excess — efficiency, the outward self. The see-through body is who she truly is.",
 
     "premiere.kicker": "New Chapter ── The Picture Book Series",
-    "premiere.lead": "The first night begins.",
+    "premiere.lead": "Night 0 begins.",
     "premiere.note": "Kinoene — the first day of the sixty-day cycle. The most auspicious night for beginnings.",
     "premiere.live": "The new chapter has begun",
     "cd.days": "days",
@@ -150,7 +150,7 @@ const I18N = {
     "creator.portfolio": "View portfolio",
 
     "notify.kicker": "Be notified when the chapter opens",
-    "notify.body": "A quiet note when the first night arrives on June 19.",
+    "notify.body": "A quiet note when Night 0 arrives on June 19.",
     "notify.placeholder": "Email address",
     "notify.submit": "Notify me",
     "notify.soon": "The form is being prepared. Follow on X for updates.",
