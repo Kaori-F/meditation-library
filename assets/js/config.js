@@ -23,16 +23,16 @@ const CONFIG = {
     { src: "assets/img/hero_06.jpg", pos: "34% center" }  // 6. 草原で満月の下、本を読む（主役が左寄り）
   ],
 
-  // ---- 新章 第0夜（序章）の配信日時（JST）----
-  premiereDate: "2026-06-19T20:00:00+09:00",
-  premiereLabelJa: "2026.6.19 20:00",
-  premiereLabelEn: "June 19, 2026 20:00 JST",
+  // ---- 新章 第1夜「皿洗い」の配信日時（JST）----
+  premiereDate: "2026-06-26T20:00:00+09:00",
+  premiereLabelJa: "2026.6.26 20:00",
+  premiereLabelEn: "June 26, 2026 20:00 JST",
 
   // ---- 観られる場所（URLを入れると自動でボタンが有効になります）----
   // YouTube / Spotify のURLを入れてください。空のあいだは「準備中」表示。
   listen: {
     youtube: "https://www.youtube.com/playlist?list=PLEEecFQkYP2s",
-    spotify: "https://open.spotify.com/show/033zGt62HYoAMNugfLNeeC"
+    spotify: "https://open.spotify.com/show/033zGykrc4Mk8SeoOTz0yK"
   },
 
   // ---- ポートフォリオサイト（連携できたらURLを入れる。空なら非表示）----
@@ -56,12 +56,22 @@ const CONFIG = {
   // status: "soon"（配信前） / "live"（配信中）
   episodes: [
     {
+      num: "第 1 夜",
+      // ↑ 絵本スタイル第1作「皿洗い」。本編の入口。
+      titleJa: "皿洗い",
+      titleEn: "Washing the Dishes",
+      date: "2026.6.26 20:00",
+      status: "soon",
+      poster: "assets/img/皿洗い_poster.png",
+      links: { youtube: "", spotify: "" }
+    },
+    {
       num: "第 0 夜",
-      // ↑ 序章・本編の入口。絵本スタイル第1作「皿洗い」が第1夜になる
+      // 序章。2026.6.19 配信済み。個別URLが出たら links に追記。
       titleJa: "ほんとうの自分に出会う道",
       titleEn: "The Path to Meeting Your True Self",
-      date: "2026.6.19 20:00",
-      status: "soon",
+      date: "2026.6.19",
+      status: "live",
       poster: "assets/img/ep01_true_self.png",
       links: { youtube: "", spotify: "" }
     }

@@ -19,7 +19,7 @@ const I18N = {
     "hero.subtitle": "眠る前の小さな絵本",
     "hero.tagline": "今日を閉じる前に、一冊だけ。",
     "hero.scroll": "下へ — 本を開く",
-    "hero.ep": "新章 第0夜 配信",
+    "hero.ep": "新章 第1夜 配信",
 
     // 図書館について（入り口）
     "concept.kicker": "図書館について",
@@ -44,8 +44,8 @@ const I18N = {
 
     // 新章 ── 絵本シリーズ
     "premiere.kicker": "新章 ── 絵本シリーズ",
-    "premiere.lead": "第0夜、はじまります。",
-    "premiere.note": "甲子の日 — 六十干支のはじまり。新しいことを始めるのに、いちばん良い夜。",
+    "premiere.lead": "第1夜、はじまります。",
+    "premiere.note": "皿を洗うように、心の濁りも、すこしずつ。今夜、絵本シリーズの第1夜がひらきます。",
     "premiere.live": "新章が、はじまりました",
     "cd.days": "日",
     "cd.hours": "時間",
@@ -60,7 +60,7 @@ const I18N = {
     // 絵本だな
     "episodes.kicker": "絵本だな",
     "episodes.note": "夜ごとに、一冊ずつ増えていきます。",
-    "episodes.soon": "6.19 20:00",
+    "episodes.soon": "6.26 20:00",
     "episodes.live": "配信中",
 
     // これまでの作品（アーカイブ）
@@ -76,7 +76,7 @@ const I18N = {
 
     // 通知
     "notify.kicker": "新章のはじまりを、お知らせします",
-    "notify.body": "6.19の配信を、静かにお知らせします。",
+    "notify.body": "6.26の配信を、静かにお知らせします。",
     "notify.placeholder": "メールアドレス",
     "notify.submit": "登録する",
     "notify.soon": "登録フォームは準備中です。Xのフォローでお知らせを受け取れます。",
@@ -98,7 +98,7 @@ const I18N = {
     "hero.subtitle": "A Little Picture Book Before Sleep",
     "hero.tagline": "Before you close the day — just one book.",
     "hero.scroll": "Scroll — open the book",
-    "hero.ep": "New Chapter, Night 0",
+    "hero.ep": "New Chapter, Night 1",
 
     "concept.kicker": "The Library",
     "concept.line1": "The end of a day.",
@@ -119,8 +119,8 @@ const I18N = {
     "luna.body3": "Night after night, one thing at a time. She is simply walking the path.",
 
     "premiere.kicker": "New Chapter ── The Picture Book Series",
-    "premiere.lead": "Night 0 begins.",
-    "premiere.note": "Kinoene — the first day of the sixty-day cycle. The most auspicious night for beginnings.",
+    "premiere.lead": "Night 1 begins.",
+    "premiere.note": "Like washing the dishes, the heart clears little by little. Tonight, Night 1 of the picture-book series opens.",
     "premiere.live": "The new chapter has begun",
     "cd.days": "days",
     "cd.hours": "hrs",
@@ -133,7 +133,7 @@ const I18N = {
 
     "episodes.kicker": "The Bookshelf",
     "episodes.note": "Night by night, one book at a time.",
-    "episodes.soon": "June 19, 20:00",
+    "episodes.soon": "June 26, 20:00",
     "episodes.live": "Now streaming",
 
     "archive.kicker": "Earlier Works",
@@ -146,7 +146,7 @@ const I18N = {
     "creator.portfolio": "View portfolio",
 
     "notify.kicker": "Be notified when the chapter opens",
-    "notify.body": "A quiet note when Night 0 arrives on June 19.",
+    "notify.body": "A quiet note when Night 1 arrives on June 26.",
     "notify.placeholder": "Email address",
     "notify.submit": "Notify me",
     "notify.soon": "The form is being prepared. Follow on X for updates.",
