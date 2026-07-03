@@ -52,28 +52,69 @@ const CONFIG = {
   // 例: "https://formspree.io/f/xxxxxxxx"
   formAction: "",
 
+  // ---- しおりを贈る（制作支援）----
+  // URLやアドレスを入れたものだけ表示されます。すべて空ならセクションごと自動で非表示。
+  support: {
+    // カード（Stripe Payment Link）
+    // presets = 固定額リンク（金額ごとに作る）／ freeUrl = 「金額おまかせ」リンク
+    // ※日本のStripeは「デジタルしおりの購入」など商品の体裁で登録するのが安全
+    card: {
+      presets: [
+        { label: "¥500",   url: "" },
+        { label: "¥1,000", url: "" },
+        { label: "¥3,000", url: "" }
+      ],
+      freeUrl: ""   // 例: "https://buy.stripe.com/xxxx"（金額おまかせ）
+    },
+    // 暗号資産・JPYC（EVMウォレット1つで ETH / JPYC / USDC などを受け取り）
+    crypto: {
+      address: "",                 // 例: "0x...."（受け取り専用アドレス推奨）
+      ens: "",                     // 例: "name.eth"（あれば）
+      chains: "Ethereum / Polygon" // 受け取れるチェーンの表示
+    }
+  },
+
   // ---- 新章 ── 絵本シリーズ（配信後にここへ追記していく）----
   // status: "soon"（配信前） / "live"（配信中）
   episodes: [
     {
+      num: "第 2 夜",
+      // ↑ 絵本スタイル第2作「淡味」。2026.7.3 配信済み。
+      titleJa: "淡味",
+      titleEn: "The Subtle Taste",
+      date: "2026.7.3 20:00",
+      status: "live",
+      poster: "assets/img/淡味_poster.png",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=IPiHmzuTPwA",
+        spotify: "https://open.spotify.com/episode/6HjNXRZlikDBt10NspFhkK"
+      }
+    },
+    {
       num: "第 1 夜",
-      // ↑ 絵本スタイル第1作「皿洗い」。本編の入口。
+      // ↑ 絵本スタイル第1作「皿洗い」。2026.6.26 配信済み。
       titleJa: "皿洗い",
       titleEn: "Washing the Dishes",
       date: "2026.6.26 20:00",
-      status: "soon",
+      status: "live",
       poster: "assets/img/皿洗い_poster.png",
-      links: { youtube: "", spotify: "" }
+      links: {
+        youtube: "https://www.youtube.com/watch?v=Ir_riNbuaUU",
+        spotify: "https://open.spotify.com/episode/3iI0etzaUFyDZlqmtlKifx"
+      }
     },
     {
       num: "第 0 夜",
-      // 序章。2026.6.19 配信済み。個別URLが出たら links に追記。
+      // 序章。2026.6.19 配信済み。
       titleJa: "ほんとうの自分に出会う道",
       titleEn: "The Path to Meeting Your True Self",
       date: "2026.6.19",
       status: "live",
       poster: "assets/img/ep01_true_self.png",
-      links: { youtube: "", spotify: "" }
+      links: {
+        youtube: "https://www.youtube.com/watch?v=J_7NGNCLyXA",
+        spotify: "https://open.spotify.com/episode/0jM89IkRBKRCm1HIKn6RAu"
+      }
     }
     /* 追加例：
     ,{
