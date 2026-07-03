@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>瞑想図書館 ── 眠る前の小さな絵本 | The Meditation Library</title>
-<meta name="description" content="今日を閉じる前に、一冊だけ。眠りの前にひらく、絵本のかたちをした瞑想の時間。ナマケモノの歩く速さで「見えない世界」のページをめくるビデオポッドキャスト。新章 第1夜「皿洗い」2026.6.26 20:00 配信。">
+<meta name="description" content="今日を閉じる前に、一冊だけ。眠りの前にひらく、絵本のかたちをした瞑想の時間。ナマケモノの歩く速さで「見えない世界」のページをめくるビデオポッドキャスト。毎週金曜 20:00 配信。">
 <meta property="og:title" content="瞑想図書館 ── 眠る前の小さな絵本">
-<meta property="og:description" content="今日を閉じる前に、一冊だけ。新章 第1夜「皿洗い」2026.6.26 20:00 配信。">
+<meta property="og:description" content="今日を閉じる前に、一冊だけ。毎週金曜 20:00 配信。">
 <meta property="og:image" content="https://meditation-library.pages.dev/assets/img/og_card.png">
 <meta property="og:url" content="https://meditation-library.pages.dev/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="瞑想図書館 ── 眠る前の小さな絵本">
-<meta name="twitter:description" content="今日を閉じる前に、一冊だけ。新章 第1夜「皿洗い」2026.6.26 20:00 配信。">
+<meta name="twitter:description" content="今日を閉じる前に、一冊だけ。毎週金曜 20:00 配信。">
 <meta name="twitter:image" content="https://meditation-library.pages.dev/assets/img/og_card.png">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,8 +50,8 @@
       <p class="hero-en">The Meditation Library</p>
       <p class="hero-tagline" data-i18n="hero.tagline">今日を閉じる前に、一冊だけ。</p>
       <p class="hero-premiere">
-        <span class="hero-date" id="heroDate">2026.6.26 20:00</span>
-        <span class="hero-ep" data-i18n="hero.ep">新章 第1夜 配信</span>
+        <span class="hero-date" id="heroDate"></span>
+        <span class="hero-ep" id="heroEp"></span>
       </p>
     </div>
     <a class="scroll-cue" href="#concept">
@@ -127,10 +127,10 @@
     <div class="premiere-glow" aria-hidden="true"></div>
     <div class="container narrow center">
       <p class="kicker gold" data-i18n="premiere.kicker">新章 ── 絵本シリーズ</p>
-      <p class="premiere-lead reveal" data-i18n="premiere.lead">第1夜、はじまります。</p>
-      <h2 class="premiere-eptitle" id="premiereEpTitle">皿洗い</h2>
-      <p class="premiere-date" id="premiereDate">2026.6.26 20:00</p>
-      <p class="premiere-note reveal" data-i18n="premiere.note">皿を洗うように、心の濁りも、すこしずつ。今夜、絵本シリーズの第1夜がひらきます。</p>
+      <p class="premiere-lead reveal" id="premiereLead"></p>
+      <h2 class="premiere-eptitle" id="premiereEpTitle"></h2>
+      <p class="premiere-date" id="premiereDate"></p>
+      <p class="premiere-note reveal" id="premiereNote"></p>
 
       <div class="countdown" id="countdown" role="timer">
         <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-label" data-i18n="cd.days">日</span></div>

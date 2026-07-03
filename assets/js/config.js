@@ -23,7 +23,7 @@ const CONFIG = {
     { src: "assets/img/hero_06.jpg", pos: "34% center" }  // 6. 草原で満月の下、本を読む（主役が左寄り）
   ],
 
-  // ---- 新章 第1夜「皿洗い」の配信日時（JST）----
+  // ---- （旧設定・フォールバック用に残置。今はepisodes先頭の dateISO を使う）----
   premiereDate: "2026-06-26T20:00:00+09:00",
   premiereLabelJa: "2026.6.26 20:00",
   premiereLabelEn: "June 26, 2026 20:00 JST",
@@ -74,17 +74,23 @@ const CONFIG = {
     }
   },
 
-  // ---- 新章 ── 絵本シリーズ（配信後にここへ追記していく）----
-  // status: "soon"（配信前） / "live"（配信中）
+  // ---- 新章 ── 絵本シリーズ ----
+  // 【重要】新エピソードは必ずこの配列の「先頭」に追加する。
+  // トップの文言・「始まります」枠・カウントダウンは、すべて先頭のエピソードから自動生成される。
+  //   status: "soon"（予約中→dateISOへ向けてカウントダウン表示）/ "live"（配信中）
+  //   dateISO: 配信日時（JST）。カウントダウンと自動live切り替えに使う
+  //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
       num: "第 2 夜",
-      // ↑ 絵本スタイル第2作「淡味」。2026.7.3 配信済み。
       titleJa: "淡味",
       titleEn: "The Subtle Taste",
       date: "2026.7.3 20:00",
+      dateISO: "2026-07-03T20:00:00+09:00",
       status: "live",
       poster: "assets/img/淡味_poster.png",
+      noteJa: "うすい、と思ったその味は、ほんとうに、なにもなかったのでしょうか。今夜も一冊、そっと置いていきます。",
+      noteEn: "Was that faint taste really nothing at all? Tonight, another little book is quietly placed.",
       links: {
         youtube: "https://www.youtube.com/watch?v=IPiHmzuTPwA",
         spotify: "https://open.spotify.com/episode/6HjNXRZlikDBt10NspFhkK"
@@ -92,12 +98,14 @@ const CONFIG = {
     },
     {
       num: "第 1 夜",
-      // ↑ 絵本スタイル第1作「皿洗い」。2026.6.26 配信済み。
       titleJa: "皿洗い",
       titleEn: "Washing the Dishes",
       date: "2026.6.26 20:00",
+      dateISO: "2026-06-26T20:00:00+09:00",
       status: "live",
       poster: "assets/img/皿洗い_poster.png",
+      noteJa: "皿を洗うように、心の濁りも、すこしずつ。",
+      noteEn: "Like washing the dishes, the heart clears little by little.",
       links: {
         youtube: "https://www.youtube.com/watch?v=Ir_riNbuaUU",
         spotify: "https://open.spotify.com/episode/3iI0etzaUFyDZlqmtlKifx"
@@ -105,10 +113,10 @@ const CONFIG = {
     },
     {
       num: "第 0 夜",
-      // 序章。2026.6.19 配信済み。
       titleJa: "ほんとうの自分に出会う道",
       titleEn: "The Path to Meeting Your True Self",
       date: "2026.6.19",
+      dateISO: "2026-06-19T20:00:00+09:00",
       status: "live",
       poster: "assets/img/ep01_true_self.png",
       links: {
@@ -116,16 +124,19 @@ const CONFIG = {
         spotify: "https://open.spotify.com/episode/0jM89IkRBKRCm1HIKn6RAu"
       }
     }
-    /* 追加例：
-    ,{
-      num: "第 2 夜",
+    /* 追加例（新しい夜はこの形で配列の先頭に）：
+    {
+      num: "第 3 夜",
       titleJa: "（タイトル）",
       titleEn: "(Title)",
-      date: "2026.7.x",
-      status: "live",
-      poster: "assets/img/ep_xx_poster.jpg",
-      links: { youtube: "https://...", spotify: "https://..." }
-    }
+      date: "2026.7.10 20:00",
+      dateISO: "2026-07-10T20:00:00+09:00",
+      status: "soon",   // 予約中はsoon（カウントダウンが出る）。配信されたらliveに
+      poster: "assets/img/◯◯_poster.png",
+      noteJa: "（紹介ひとこと）",
+      noteEn: "(One-line note)",
+      links: { youtube: "https://...", spotify: "" } // Spotify個別URLは配信後に追記
+    },
     */
   ],
 

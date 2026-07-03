@@ -60,17 +60,38 @@
     }, 8000); // 8秒ごと（瞑想的な間）。リロード時は必ず先頭(index 0)から
   }
 
-  /* ---------- 日付・タイトルの差し込み（config / 言語連動） ---------- */
+  /* ---------- 日付・タイトルの差し込み（最新エピソード＝episodes先頭から自動生成） ---------- */
   function renderMeta() {
-    const label = lang === "ja" ? CONFIG.premiereLabelJa : CONFIG.premiereLabelEn;
+    const latest = CONFIG.episodes && CONFIG.episodes[0];
+    if (!latest) return;
+    const live = latest.status === "live";
+    const numJa = (latest.num || "").replace(/\s+/g, "");        // "第2夜"
+    const nightNum = (latest.num || "").replace(/[^0-9]/g, "");  // "2"
+
     const heroDate = document.getElementById("heroDate");
     const premiereDate = document.getElementById("premiereDate");
-    if (heroDate) heroDate.textContent = label;
-    if (premiereDate) premiereDate.textContent = label;
+    if (heroDate) heroDate.textContent = latest.date || "";
+    if (premiereDate) premiereDate.textContent = latest.date || "";
+
+    const heroEp = document.getElementById("heroEp");
+    if (heroEp) heroEp.textContent = lang === "ja"
+      ? "新章 " + numJa + (live ? " 配信中" : " 配信予定")
+      : "New Chapter ── Night " + nightNum + (live ? " now open" : " coming soon");
+
+    const lead = document.getElementById("premiereLead");
+    if (lead) lead.textContent = lang === "ja"
+      ? numJa + (live ? "、ひらきました。" : "、はじまります。")
+      : "Night " + nightNum + (live ? " is open." : " begins.");
+
+    const note = document.getElementById("premiereNote");
+    if (note) {
+      const txt = lang === "ja" ? (latest.noteJa || "") : (latest.noteEn || latest.noteJa || "");
+      note.textContent = txt;
+      note.hidden = !txt;
+    }
 
     const epTitle = document.getElementById("premiereEpTitle");
-    const first = CONFIG.episodes && CONFIG.episodes[0];
-    if (epTitle && first) epTitle.textContent = lang === "ja" ? first.titleJa : first.titleEn;
+    if (epTitle) epTitle.textContent = lang === "ja" ? latest.titleJa : latest.titleEn;
   }
 
   /* ---------- スクロール連動：昼 → 本を開く → 夜（眠りへ） ---------- */
@@ -143,8 +164,9 @@
   }, { threshold: 0.18 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-  /* ---------- カウントダウン ---------- */
-  const target = new Date(CONFIG.premiereDate).getTime();
+  /* ---------- カウントダウン（最新エピソードの dateISO へ向けて） ---------- */
+  const cdLatest = CONFIG.episodes && CONFIG.episodes[0];
+  const target = new Date((cdLatest && cdLatest.dateISO) || CONFIG.premiereDate).getTime();
   const elD = document.getElementById("cdDays");
   const elH = document.getElementById("cdHours");
   const elM = document.getElementById("cdMins");
