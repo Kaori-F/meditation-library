@@ -74,6 +74,18 @@ const I18N = {
     "creator.body2": "イラスト・アニメーション・NFT。すべての制作は、精神世界への理解を深めるための旅です。",
     "creator.portfolio": "ポートフォリオを見る",
 
+    // しおりを贈る（制作支援）
+    "support.kicker": "しおりを贈る",
+    "support.lead1": "もし、この夜がすこし心に残ったら。",
+    "support.lead2": "次の一冊をつくる灯りを、そっと分けてもらえたら嬉しいです。",
+    "support.card": "カードで贈る",
+    "support.crypto": "暗号資産で贈る",
+    "support.free": "自由な金額で",
+    "support.cryptoNote": "ETH・JPYC・USDC など",
+    "support.copy": "コピー",
+    "support.copied": "コピーしました",
+    "support.note": "送り手の情報は決済サービス側で守られ、わたしには届きません。",
+
     // 通知
     "notify.kicker": "新章のはじまりを、お知らせします",
     "notify.body": "6.26の配信を、静かにお知らせします。",
@@ -144,6 +156,18 @@ const I18N = {
     "creator.body1": "An artist exploring the invisible laws of the world through art.",
     "creator.body2": "Illustration, animation, NFT — every work is a journey deeper into the spiritual world.",
     "creator.portfolio": "View portfolio",
+
+    // Send a Bookmark (support)
+    "support.kicker": "Send a Bookmark",
+    "support.lead1": "If this night lingered with you, even a little —",
+    "support.lead2": "I'd be grateful for a small light toward the next book.",
+    "support.card": "With a card",
+    "support.crypto": "With crypto",
+    "support.free": "Choose your amount",
+    "support.cryptoNote": "ETH, JPYC, USDC and more",
+    "support.copy": "Copy",
+    "support.copied": "Copied",
+    "support.note": "Your details stay with the payment service — they never reach me.",
 
     "notify.kicker": "Be notified when the chapter opens",
     "notify.body": "A quiet note when Night 1 arrives on June 26.",

@@ -25,6 +25,7 @@
     renderEpisodes();
     renderArchive();
     renderCreatorLinks();
+    renderSupport();
   }
 
   document.getElementById("langToggle").addEventListener("click", () => {
@@ -278,6 +279,69 @@
     if (pf) {
       if (CONFIG.portfolioUrl) { pf.href = CONFIG.portfolioUrl; pf.hidden = false; }
       else { pf.hidden = true; }
+    }
+  }
+
+  /* ---------- しおりを贈る（制作支援） ---------- */
+  function renderSupport() {
+    const sec = document.getElementById("support");
+    const wrap = document.getElementById("supportMethods");
+    if (!sec || !wrap) return;
+    const s = (CONFIG.support || {});
+    const card = s.card || {};
+    const crypto = s.crypto || {};
+    const presets = (card.presets || []).filter(p => p.url);
+    const hasCard = presets.length > 0 || !!card.freeUrl;
+    const hasCrypto = !!(crypto.address);
+
+    if (!hasCard && !hasCrypto) { sec.hidden = true; wrap.innerHTML = ""; return; }
+    sec.hidden = false;
+    wrap.innerHTML = "";
+
+    // --- カード ---
+    if (hasCard) {
+      const block = document.createElement("div");
+      block.className = "support-block";
+      let html = '<p class="support-method-label">' + t("support.card") + "</p>";
+      html += '<div class="support-amounts">';
+      presets.forEach(p => {
+        html += '<a class="support-amount" href="' + p.url + '" target="_blank" rel="noopener">' + p.label + "</a>";
+      });
+      if (card.freeUrl) {
+        html += '<a class="support-amount support-free" href="' + card.freeUrl + '" target="_blank" rel="noopener">' + t("support.free") + "</a>";
+      }
+      html += "</div>";
+      block.innerHTML = html;
+      wrap.appendChild(block);
+    }
+
+    // --- 暗号資産・JPYC ---
+    if (hasCrypto) {
+      const block = document.createElement("div");
+      block.className = "support-block";
+      const note = t("support.cryptoNote") + (crypto.chains ? "（" + crypto.chains + "）" : "");
+      const ensLine = crypto.ens ? '<p class="support-ens">' + crypto.ens + "</p>" : "";
+      block.innerHTML =
+        '<p class="support-method-label">' + t("support.crypto") + "</p>" +
+        ensLine +
+        '<div class="support-wallet">' +
+          '<code class="support-addr" id="supportAddr">' + crypto.address + "</code>" +
+          '<button type="button" class="support-copy" id="supportCopy">' + t("support.copy") + "</button>" +
+        "</div>" +
+        '<p class="support-chains">' + note + "</p>";
+      wrap.appendChild(block);
+
+      const btn = block.querySelector("#supportCopy");
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(crypto.address);
+          btn.textContent = t("support.copied");
+          setTimeout(() => { btn.textContent = t("support.copy"); }, 1800);
+        } catch (e) {
+          const r = document.createRange(); r.selectNode(block.querySelector("#supportAddr"));
+          const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        }
+      });
     }
   }
 

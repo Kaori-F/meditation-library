@@ -179,6 +179,17 @@
       <div class="creator-links" id="creatorLinks"><!-- JSで生成 --></div>
       <p class="portfolio-wrap"><a class="portfolio-link" id="portfolioLink" hidden target="_blank" rel="noopener" data-i18n="creator.portfolio">ポートフォリオを見る</a></p>
 
+      <!-- しおりを贈る（制作支援。configが空なら自動で非表示） -->
+      <div class="support" id="support" hidden>
+        <p class="kicker gold" data-i18n="support.kicker">しおりを贈る</p>
+        <div class="poem reveal">
+          <p data-i18n="support.lead1">もし、この夜がすこし心に残ったら。</p>
+          <p data-i18n="support.lead2">次の一冊をつくる灯りを、そっと分けてもらえたら嬉しいです。</p>
+        </div>
+        <div class="support-methods" id="supportMethods"><!-- JSで生成 --></div>
+        <p class="support-note" data-i18n="support.note">送り手の情報は決済サービス側で守られ、わたしには届きません。</p>
+      </div>
+
       <!-- メール登録フォーム：formActionが未設定のため現在は非表示。
            復活させるときは下の hidden を外し、config.js の formAction にURLを入れる -->
       <div class="notify" id="notify" hidden>
