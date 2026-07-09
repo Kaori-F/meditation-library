@@ -82,6 +82,21 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 3 夜",
+      titleJa: "境目",
+      titleEn: "The Boundary",
+      date: "2026.7.10 20:00",
+      dateISO: "2026-07-10T20:00:00+09:00",
+      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      poster: "assets/img/境目_poster.png",
+      noteJa: "低くかがんで、近づくほど、見えてくる世界がある。境目は、いつのまにか薄くなる。",
+      noteEn: "The lower you crouch, the closer you draw, the more the world reveals. The boundary quietly fades.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=i8rELgYDdaw",
+        spotify: ""
+      }
+    },
+    {
       num: "第 2 夜",
       titleJa: "淡味",
       titleEn: "The Subtle Taste",
