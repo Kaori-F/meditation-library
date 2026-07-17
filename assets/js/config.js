@@ -82,6 +82,21 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 4 夜",
+      titleJa: "未読の未来",
+      titleEn: "Unread Futures",
+      date: "2026.7.17 20:00",
+      dateISO: "2026-07-17T20:00:00+09:00",
+      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      poster: "assets/img/未読の未来_poster.png",
+      noteJa: "起きていない未来さえ、もう、そこにある。読むのは、これから。",
+      noteEn: "Even the futures that haven't happened yet are already there. All that's left is to read them.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=yntzAahG6zw",
+        spotify: ""
+      }
+    },
+    {
       num: "第 3 夜",
       titleJa: "境目",
       titleEn: "The Boundary",
