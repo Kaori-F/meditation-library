@@ -82,12 +82,27 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 5 夜",
+      titleJa: "売り切れのない棚",
+      titleEn: "The Shelf That Never Sells Out",   // ※仮訳。Kaoriさん確認待ち
+      date: "2026.7.24 20:00",
+      dateISO: "2026-07-24T20:00:00+09:00",
+      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      poster: "assets/img/売り切れのない棚_poster.png",
+      noteJa: "その一冊を選ぶのに、誰かの許可はいらない。わたしには、その価値がある。",
+      noteEn: "Choosing your story needs no one's permission. You are already worth it.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=V3r1ewH2F8M",
+        spotify: ""
+      }
+    },
+    {
       num: "第 4 夜",
       titleJa: "未読の未来",
       titleEn: "Unread Futures",
       date: "2026.7.17 20:00",
       dateISO: "2026-07-17T20:00:00+09:00",
-      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      status: "live",
       poster: "assets/img/未読の未来_poster.png",
       noteJa: "起きていない未来さえ、もう、そこにある。読むのは、これから。",
       noteEn: "Even the futures that haven't happened yet are already there. All that's left is to read them.",
@@ -102,7 +117,7 @@ const CONFIG = {
       titleEn: "The Boundary",
       date: "2026.7.10 20:00",
       dateISO: "2026-07-10T20:00:00+09:00",
-      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      status: "live",
       poster: "assets/img/境目_poster.png",
       noteJa: "低くかがんで、近づくほど、見えてくる世界がある。境目は、いつのまにか薄くなる。",
       noteEn: "The lower you crouch, the closer you draw, the more the world reveals. The boundary quietly fades.",

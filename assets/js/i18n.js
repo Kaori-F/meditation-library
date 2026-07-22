@@ -60,7 +60,7 @@ const I18N = {
     // 絵本だな
     "episodes.kicker": "絵本だな",
     "episodes.note": "夜ごとに、一冊ずつ増えていきます。",
-    "episodes.soon": "6.26 20:00",
+    "episodes.soon": "配信予定",
     "episodes.live": "配信中",
 
     // これまでの作品（アーカイブ）
@@ -145,7 +145,7 @@ const I18N = {
 
     "episodes.kicker": "The Bookshelf",
     "episodes.note": "Night by night, one book at a time.",
-    "episodes.soon": "June 26, 20:00",
+    "episodes.soon": "Coming soon",
     "episodes.live": "Now streaming",
 
     "archive.kicker": "Earlier Works",

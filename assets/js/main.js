@@ -241,7 +241,7 @@
           '<p class="episode-num">' + ep.num + "</p>" +
           '<p class="episode-title">' + (lang === "ja" ? ep.titleJa : ep.titleEn) + "</p>" +
           '<p class="episode-date">' + ep.date + "</p>" +
-          '<span class="episode-badge">' + (live ? t("episodes.live") : t("episodes.soon")) + "</span>" +
+          (live ? "" : '<span class="episode-badge">' + t("episodes.soon") + "</span>") +
         "</div>";
       grid.appendChild(card);
     });
