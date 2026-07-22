@@ -84,7 +84,7 @@ const CONFIG = {
     {
       num: "第 5 夜",
       titleJa: "売り切れのない棚",
-      titleEn: "The Shelf That Never Sells Out",   // ※仮訳。Kaoriさん確認待ち
+      titleEn: "The Never-Empty Shelf",
       date: "2026.7.24 20:00",
       dateISO: "2026-07-24T20:00:00+09:00",
       status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
