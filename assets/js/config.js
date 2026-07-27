@@ -82,12 +82,27 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 6 夜",
+      titleJa: "川の選ぶ道",
+      titleEn: "Let the River Choose",
+      date: "2026.7.31 20:00",
+      dateISO: "2026-07-31T20:00:00+09:00",
+      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      poster: "assets/img/川の選ぶ道_poster.png",
+      noteJa: "行き先だけ決めて、道筋は川にまかせる。いちばん力のいらない方へ、流れは道をひらいている。",
+      noteEn: "Choose only the destination, and let the river choose the way. The current is already opening the path that needs the least effort.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=Q7TBwL6EhMk",
+        spotify: ""
+      }
+    },
+    {
       num: "第 5 夜",
       titleJa: "売り切れのない棚",
       titleEn: "The Never-Empty Shelf",
       date: "2026.7.24 20:00",
       dateISO: "2026-07-24T20:00:00+09:00",
-      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      status: "live",   // 2026-07-24 配信済み。Spotify個別URLは取得後に追記
       poster: "assets/img/売り切れのない棚_poster.png",
       noteJa: "その一冊を選ぶのに、誰かの許可はいらない。わたしには、その価値がある。",
       noteEn: "Choosing your story needs no one's permission. You are already worth it.",
