@@ -78,16 +78,33 @@ const CONFIG = {
   // 【重要】新エピソードは必ずこの配列の「先頭」に追加する。
   // トップの文言・「始まります」枠・カウントダウンは、すべて先頭のエピソードから自動生成される。
   //   status: "soon"（予約中→dateISOへ向けてカウントダウン表示）/ "live"（配信中）
-  //   dateISO: 配信日時（JST）。カウントダウンと自動live切り替えに使う
+  //   dateISO: 配信日時（JST）。カウントダウンと自動live切り替えに使う。
+  //     ※dateISO を過ぎたエピソードは status が "soon" のままでも自動で「配信中」表示になる。
+  //       手で "live" に書き換える必要はない（書いてもよい。その場合は日時に関係なく常に配信中）。
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
+    {
+      num: "第 7 夜",
+      titleJa: "問われるまで",
+      titleEn: "Until You Ask",
+      date: "2026.8.7 20:00",
+      dateISO: "2026-08-07T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/問われるまで_poster.png",
+      noteJa: "どうしたらいいのか、わからなくなる夜がある。それはまだ、問いが言葉になっていないだけ。",
+      noteEn: "There are nights when you no longer know what to do. It only means the question hasn't found its words yet.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=1qm7Yz85BKw",
+        spotify: ""
+      }
+    },
     {
       num: "第 6 夜",
       titleJa: "川の選ぶ道",
       titleEn: "Let the River Choose",
       date: "2026.7.31 20:00",
       dateISO: "2026-07-31T20:00:00+09:00",
-      status: "soon",   // 予約中。配信されたら "live" に、Spotify個別URLも追記
+      status: "live",   // 2026-07-31 配信済み。Spotify個別URLは取得後に追記
       poster: "assets/img/川の選ぶ道_poster.png",
       noteJa: "行き先だけ決めて、道筋は川にまかせる。いちばん力のいらない方へ、流れは道をひらいている。",
       noteEn: "Choose only the destination, and let the river choose the way. The current is already opening the path that needs the least effort.",
@@ -191,7 +208,7 @@ const CONFIG = {
       titleEn: "(Title)",
       date: "2026.7.10 20:00",
       dateISO: "2026-07-10T20:00:00+09:00",
-      status: "soon",   // 予約中はsoon（カウントダウンが出る）。配信されたらliveに
+      status: "soon",   // 予約中はsoon（カウントダウンが出る）。dateISOを過ぎたら自動で配信中になる
       poster: "assets/img/◯◯_poster.png",
       noteJa: "（紹介ひとこと）",
       noteEn: "(One-line note)",

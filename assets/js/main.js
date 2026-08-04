@@ -60,11 +60,20 @@
     }, 8000); // 8秒ごと（瞑想的な間）。リロード時は必ず先頭(index 0)から
   }
 
+  /* ---------- エピソードが公開済みかどうか ---------- */
+  // status が "live" か、dateISO を過ぎていれば true。
+  // これにより、配信のたびに config.js を soon → live に手で書き換える必要がなくなる。
+  function isLive(ep) {
+    if (!ep) return false;
+    if (ep.status === "live") return true;
+    return ep.dateISO ? Date.now() >= new Date(ep.dateISO).getTime() : false;
+  }
+
   /* ---------- 日付・タイトルの差し込み（最新エピソード＝episodes先頭から自動生成） ---------- */
   function renderMeta() {
     const latest = CONFIG.episodes && CONFIG.episodes[0];
     if (!latest) return;
-    const live = latest.status === "live";
+    const live = isLive(latest);
     const numJa = (latest.num || "").replace(/\s+/g, "");        // "第2夜"
     const nightNum = (latest.num || "").replace(/[^0-9]/g, "");  // "2"
 
@@ -180,7 +189,10 @@
     const diff = target - Date.now();
     if (diff <= 0) {
       cdWrap.hidden = true;
-      liveMsg.hidden = false;
+      // 「新章が、はじまりました」は出さない（2026-08-03）。
+      // #premiereLive の要素と i18n の premiere.live は、今後別の文言を入れる可能性があるため残してある。
+      // liveMsg.hidden = false;
+      renderMeta();   // 開いたまま配信時刻をまたいだときも「配信予定」→「配信中」に切り替わるように
       return;
     }
     const d = Math.floor(diff / 86400000);
@@ -229,7 +241,7 @@
     const grid = document.getElementById("episodeGrid");
     grid.innerHTML = "";
     CONFIG.episodes.forEach(ep => {
-      const live = ep.status === "live";
+      const live = isLive(ep);
       const epUrl = ep.links && (ep.links.youtube || ep.links.spotify);
       const tag = epUrl ? "a" : "div";
       const card = document.createElement(tag);
