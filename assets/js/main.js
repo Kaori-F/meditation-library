@@ -237,15 +237,21 @@
   }
 
   /* ---------- 絵本だな（エピソード） ---------- */
+  // 棚に出しておく冊数。超えた分は畳んでおき、ボタンひとつで出てくる（消さない）
+  const SHELF_LIMIT = CONFIG.shelfLimit || 8;
+  let shelfOpen = false;
+
   function renderEpisodes() {
     const grid = document.getElementById("episodeGrid");
     grid.innerHTML = "";
-    CONFIG.episodes.forEach(ep => {
+    CONFIG.episodes.forEach((ep, i) => {
+      const tucked = !shelfOpen && i >= SHELF_LIMIT;
       const live = isLive(ep);
       const epUrl = ep.links && (ep.links.youtube || ep.links.spotify);
       const tag = epUrl ? "a" : "div";
       const card = document.createElement(tag);
-      card.className = "episode-card" + (live ? " is-live" : "");
+      card.className = "episode-card" + (live ? " is-live" : "") + (tucked ? " is-tucked" : "");
+      if (tucked) card.hidden = true;
       if (epUrl) { card.href = epUrl; card.target = "_blank"; card.rel = "noopener"; }
       card.innerHTML =
         '<div class="thumb"><img src="' + ep.poster + '" alt="" loading="lazy"></div>' +
@@ -262,7 +268,30 @@
     ph.className = "episode-card placeholder";
     ph.innerHTML = "<span>……</span>";
     grid.appendChild(ph);
+
+    renderShelfToggle();
   }
+
+  // しまってある夜があるときだけボタンを出す
+  function renderShelfToggle() {
+    const wrap = document.getElementById("shelfMore");
+    const btn = document.getElementById("shelfToggle");
+    if (!wrap || !btn) return;
+    const tuckedCount = CONFIG.episodes.length - SHELF_LIMIT;
+    if (tuckedCount <= 0) { wrap.hidden = true; return; }
+    wrap.hidden = false;
+    btn.textContent = shelfOpen ? t("episodes.less") : t("episodes.more");
+    btn.setAttribute("aria-expanded", String(shelfOpen));
+  }
+
+  document.getElementById("shelfToggle").addEventListener("click", () => {
+    shelfOpen = !shelfOpen;
+    renderEpisodes();
+    if (!shelfOpen) {
+      // 畳んだときは棚の頭に戻す（畳んだ分だけ画面が飛ぶのを防ぐ）
+      document.getElementById("episodes").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 
   /* ---------- これまでの作品（アーカイブ） ---------- */
   function renderArchive() {

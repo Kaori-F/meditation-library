@@ -62,6 +62,8 @@ const I18N = {
     "episodes.note": "夜ごとに、一冊ずつ増えていきます。",
     "episodes.soon": "配信予定",
     "episodes.live": "配信中",
+    "episodes.more": "これまでの夜を、ひらく",
+    "episodes.less": "とじる",
 
     // これまでの作品（アーカイブ）
     "archive.kicker": "これまでの作品",
@@ -147,6 +149,8 @@ const I18N = {
     "episodes.note": "Night by night, one book at a time.",
     "episodes.soon": "Coming soon",
     "episodes.live": "Now streaming",
+    "episodes.more": "Open the earlier nights",
+    "episodes.less": "Close",
 
     "archive.kicker": "Earlier Works",
     "archive.note": "Small films from the road that led to this library.",

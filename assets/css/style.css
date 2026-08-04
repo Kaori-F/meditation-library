@@ -367,6 +367,18 @@ a.episode-card:hover { border-color: var(--gold); transform: translateY(-3px); }
 .episode-card.placeholder span {
   font-family: var(--serif); color: var(--moon-soft); letter-spacing: .3em; font-size: .85rem;
 }
+/* 棚に出しきらない夜（消さずに畳んでおく） */
+.episode-card.is-tucked { display: none; }
+.shelf-more { text-align: center; margin-top: 2rem; }
+.shelf-more[hidden] { display: none; }
+.shelf-toggle {
+  background: none; cursor: pointer;
+  font-family: var(--serif); font-size: .8rem; letter-spacing: .2em;
+  color: var(--moon-soft); border: 1px solid rgba(236,228,212,.24);
+  border-radius: 999px; padding: .6rem 1.7rem;
+  transition: border-color .3s, color .3s;
+}
+.shelf-toggle:hover, .shelf-toggle:focus-visible { border-color: var(--gold); color: var(--gold); }
 
 /* ---------- ショーリール ---------- */
 .showreel { color: var(--moon); }

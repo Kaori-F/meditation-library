@@ -155,6 +155,10 @@
       <p class="kicker gold" data-i18n="episodes.kicker">絵本だな</p>
       <p class="section-note" data-i18n="episodes.note">夜ごとに、一冊ずつ増えていきます。</p>
       <div class="episode-grid" id="episodeGrid"><!-- JSで生成 --></div>
+      <!-- 8冊を超えた分をしまう／出すボタン。冊数は config.js の shelfLimit -->
+      <div class="shelf-more" id="shelfMore" hidden>
+        <button type="button" class="shelf-toggle" id="shelfToggle" aria-expanded="false" aria-controls="episodeGrid"></button>
+      </div>
     </div>
   </section>
 
