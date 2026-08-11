@@ -89,12 +89,27 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 8 夜",
+      titleJa: "罪状：ひと休み",
+      titleEn: "The Crime of Resting",
+      date: "2026.8.14 20:00",
+      dateISO: "2026-08-14T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/罪状：ひと休み_poster.png",
+      noteJa: "ひと休みしただけで、なぜか罪悪感に襲われる。責める声や、かばう声は、どこから聞こえているのだろう。",
+      noteEn: "You only stopped to rest, and still the guilt arrives. The voice that accuses, the voice that defends — where are they coming from?",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=FKNc_hmrNzk",
+        spotify: ""
+      }
+    },
+    {
       num: "第 7 夜",
       titleJa: "問われるまで",
       titleEn: "Until You Ask",
       date: "2026.8.7 20:00",
       dateISO: "2026-08-07T20:00:00+09:00",
-      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      status: "live",   // 2026-08-07 配信済み。Spotify個別URLは取得後に追記
       poster: "assets/img/問われるまで_poster.png",
       noteJa: "どうしたらいいのか、わからなくなる夜がある。それはまだ、問いが言葉になっていないだけ。",
       noteEn: "There are nights when you no longer know what to do. It only means the question hasn't found its words yet.",
