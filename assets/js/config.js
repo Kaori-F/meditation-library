@@ -96,8 +96,8 @@ const CONFIG = {
       dateISO: "2026-08-21T20:00:00+09:00",
       status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
       poster: "assets/img/形のないもの_poster.png",
-      noteJa: "風にも、時間にも、安心にも、かたちはない。形のないものは、形のあるものを通して、この世界に現れている。",
-      noteEn: "Wind, time, ease — none of them have a shape. What has no form still arrives, through the things that do.",
+      noteJa: "形のないものは、形のあるものを通して、この世界に現れている。",
+      noteEn: "What has no form still arrives, through the things that do.",
       links: {
         youtube: "https://www.youtube.com/watch?v=pLDvGH-xvlU",
         spotify: ""
