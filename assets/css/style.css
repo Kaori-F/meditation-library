@@ -1,7 +1,9 @@
 /* =========================================================
    瞑想図書館 ── 眠る前の小さな絵本 / The Meditation Library
-   テーマ：「昼の図書館 → 本を開く → 眠りの夜へ」
-   スクロールとともに、生成り → 夕暮れ → 深い夜へ
+   テーマ：「眠りの夜の図書館」
+   ヒーローの下から夜がはじまり、スクロールとともに深くなる
+   （2026-08-20まで「生成り → 夕暮れ → 深い夜」だったが、
+     新章を上・図書館についてを下に並べ替えたため夜に統一した）
    ========================================================= */
 
 :root {
@@ -31,8 +33,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--sans);
-  background: var(--cream); /* JSがスクロールで上書き */
-  color: var(--ink);
+  background: var(--night-2); /* JSがスクロールで上書き */
+  color: var(--moon);
   line-height: 1.9;
   letter-spacing: 0.04em;
   overflow-x: hidden;
@@ -114,7 +116,7 @@ img { max-width: 100%; display: block; }
   position: absolute; inset: 0;
   background:
     radial-gradient(ellipse at center 42%, rgba(19,26,45,0) 30%, rgba(19,26,45,.55) 100%),
-    linear-gradient(to bottom, rgba(19,26,45,.25), rgba(19,26,45,.1) 40%, rgba(247,241,230,.92) 99%);
+    linear-gradient(to bottom, rgba(19,26,45,.25), rgba(19,26,45,.1) 40%, rgba(27,36,64,.92) 99%);
 }
 .hero-inner { position: relative; z-index: 2; padding: 0 1.5rem; color: #fff; }
 .hero-kicker {
@@ -158,13 +160,13 @@ img { max-width: 100%; display: block; }
 .hero-ep { font-size: .78rem; letter-spacing: .26em; color: rgba(255,255,255,.9); }
 .scroll-cue {
   position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%);
-  z-index: 2; text-decoration: none; color: var(--ink-soft);
+  z-index: 2; text-decoration: none; color: var(--moon-soft);
   font-size: .7rem; letter-spacing: .22em;
   display: flex; flex-direction: column; align-items: center; gap: .5rem;
 }
 .scroll-line {
   width: 1px; height: 42px;
-  background: linear-gradient(to bottom, var(--ink-soft), transparent);
+  background: linear-gradient(to bottom, var(--moon-soft), transparent);
   animation: cueDrop 2.2s ease-in-out infinite;
 }
 @keyframes cueDrop {
@@ -181,7 +183,7 @@ img { max-width: 100%; display: block; }
 
 .kicker {
   font-size: .72rem; letter-spacing: .4em; text-indent: .4em;
-  color: var(--ink-soft); margin-bottom: 2.2rem; text-align: center;
+  color: var(--moon-soft); margin-bottom: 2.2rem; text-align: center;
 }
 .kicker.gold { color: var(--gold); }
 .h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; letter-spacing: .12em; }
@@ -203,7 +205,7 @@ img { max-width: 100%; display: block; }
 .concept { text-align: center; }
 .concept-fig img {
   border-radius: 6px; margin: 1rem auto 0;
-  box-shadow: 0 18px 50px rgba(91,76,66,.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
 
 /* ---------- 本を開く（演出） ---------- */
@@ -360,13 +362,6 @@ a.episode-card:hover { border-color: var(--gold); transform: translateY(-3px); }
   border-radius: 999px; padding: .18rem .8rem;
 }
 .episode-card.is-live .episode-badge { background: var(--gold); color: var(--night); }
-.episode-card.placeholder {
-  display: flex; align-items: center; justify-content: center;
-  min-height: 220px; border-style: dashed; background: transparent;
-}
-.episode-card.placeholder span {
-  font-family: var(--serif); color: var(--moon-soft); letter-spacing: .3em; font-size: .85rem;
-}
 /* 棚に出しきらない夜（消さずに畳んでおく） */
 .episode-card.is-tucked { display: none; }
 .shelf-more { text-align: center; margin-top: 2rem; }

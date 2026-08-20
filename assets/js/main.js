@@ -103,59 +103,37 @@
     if (epTitle) epTitle.textContent = lang === "ja" ? latest.titleJa : latest.titleEn;
   }
 
-  /* ---------- スクロール連動：昼 → 本を開く → 夜（眠りへ） ---------- */
+  /* ---------- スクロール連動：夜が、下へ行くほど深くなる ---------- */
+  // 2026-08-20の並べ替えまでは「生成り（昼）→ 夕暮れ → 夜」だった。
+  // 新章を上へ、図書館についてを下へ移したことで昼の区間が下に来てしまい、
+  // 途中で明るくなる道のりになるため廃止した。いまは夜のなかだけで深くなる。
   const COLORS = {
-    cream: [247, 241, 230],
-    dusk:  [110, 90, 116],
-    night: [19, 26, 45]
+    nightTop: [27, 36, 64],   // ヒーロー直下。すこし明るい夜
+    night:    [19, 26, 45]    // 絵本だな以降。深い夜
   };
-  const INK = {
-    cream: [91, 76, 66],
-    dusk:  [236, 228, 212],
-    night: [236, 228, 212]
-  };
+  const INK = { night: [236, 228, 212] };
 
   function lerp(a, b, f) { return a + (b - a) * f; }
   function mix(c1, c2, f) {
     return `rgb(${Math.round(lerp(c1[0], c2[0], f))},${Math.round(lerp(c1[1], c2[1], f))},${Math.round(lerp(c1[2], c2[2], f))})`;
   }
+  function clamp01(f) { return f < 0 ? 0 : (f > 1 ? 1 : f); }
 
-  const elConcept = document.getElementById("concept");
-  const elOpenbook = document.getElementById("openbook");
   const elPremiere = document.getElementById("premiere");
+  const elEpisodes = document.getElementById("episodes");
 
   function updateBackground() {
     const vh = window.innerHeight;
     const probe = window.scrollY + vh * 0.6; // 視点の少し下を基準に
 
-    const creamEnd = elConcept.offsetTop + elConcept.offsetHeight * 0.55;
-    const duskMid  = elOpenbook.offsetTop + elOpenbook.offsetHeight * 0.5;
-    const nightAt  = elPremiere.offsetTop;
+    const from = elPremiere.offsetTop;
+    const to   = elEpisodes.offsetTop + elEpisodes.offsetHeight * 0.5;
+    const f = clamp01((probe - from) / Math.max(1, to - from));
 
-    let bg, ink, night = 0;
-
-    if (probe <= creamEnd) {
-      bg = mix(COLORS.cream, COLORS.cream, 0);
-      ink = mix(INK.cream, INK.cream, 0);
-    } else if (probe <= duskMid) {
-      const f = (probe - creamEnd) / (duskMid - creamEnd);
-      bg = mix(COLORS.cream, COLORS.dusk, f);
-      ink = mix(INK.cream, INK.dusk, Math.min(1, f * 1.6));
-      night = f * 0.35;
-    } else if (probe <= nightAt) {
-      const f = (probe - duskMid) / (nightAt - duskMid);
-      bg = mix(COLORS.dusk, COLORS.night, f);
-      ink = mix(INK.dusk, INK.night, f);
-      night = 0.35 + f * 0.65;
-    } else {
-      bg = mix(COLORS.night, COLORS.night, 0);
-      ink = mix(INK.night, INK.night, 0);
-      night = 1;
-    }
-
-    document.body.style.backgroundColor = bg;
-    document.body.style.color = ink;
-    document.documentElement.style.setProperty("--night-amount", night.toFixed(2));
+    document.body.style.backgroundColor = mix(COLORS.nightTop, COLORS.night, f);
+    document.body.style.color = mix(INK.night, INK.night, 0);
+    // 星は最初からうっすら見えていて、深まるほど濃くなる
+    document.documentElement.style.setProperty("--night-amount", (0.45 + f * 0.55).toFixed(2));
   }
 
   let ticking = false;
@@ -263,12 +241,6 @@
         "</div>";
       grid.appendChild(card);
     });
-    // 次の一冊の「器」
-    const ph = document.createElement("div");
-    ph.className = "episode-card placeholder";
-    ph.innerHTML = "<span>……</span>";
-    grid.appendChild(ph);
-
     renderShelfToggle();
   }
 

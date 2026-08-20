@@ -29,10 +29,10 @@
 <header class="site-header">
   <a class="brand" href="#top">瞑想図書館</a>
   <nav class="nav">
-    <a href="#concept" data-i18n="nav.concept">図書館について</a>
-    <a href="#luna" data-i18n="nav.luna">ルナすろーす</a>
     <a href="#premiere" data-i18n="nav.shincho">新章</a>
     <a href="#archive" data-i18n="nav.archive">アーカイブ</a>
+    <a href="#concept" data-i18n="nav.concept">図書館について</a>
+    <a href="#luna" data-i18n="nav.luna">ルナすろーす</a>
   </nav>
   <button class="lang-toggle" id="langToggle" data-i18n="lang.toggle">EN</button>
 </header>
@@ -54,72 +54,10 @@
         <span class="hero-ep" id="heroEp"></span>
       </p>
     </div>
-    <a class="scroll-cue" href="#concept">
+    <a class="scroll-cue" href="#premiere">
       <span data-i18n="hero.scroll">下へ — 本を開く</span>
       <span class="scroll-line"></span>
     </a>
-  </section>
-
-  <!-- ═══════════ 図書館について（入り口） ═══════════ -->
-  <section class="section concept" id="concept" data-zone="light">
-    <div class="container narrow">
-      <p class="kicker" data-i18n="concept.kicker">図書館について</p>
-      <div class="poem reveal">
-        <p data-i18n="concept.line1">一日のおわり。</p>
-        <p data-i18n="concept.line2">灯りをひとつ落として、ページをめくる。</p>
-      </div>
-      <div class="poem reveal">
-        <p data-i18n="concept.line3">ここは、眠りの前にひらく小さな図書館。</p>
-        <p class="poem-em" data-i18n="concept.line4">絵本のかたちをした、瞑想の時間です。</p>
-      </div>
-      <div class="poem reveal">
-        <p data-i18n="concept.line5">目に見えるものだけが、世界のすべてじゃない。</p>
-        <p data-i18n="concept.line6">ナマケモノの歩く速さで、</p>
-        <p data-i18n="concept.line7">「見えない世界」のページを、いっしょにめくっていきます。</p>
-      </div>
-      <figure class="concept-fig reveal">
-        <img src="assets/img/world_light.jpg" alt="木漏れ日の参道を歩くルナすろーす" loading="lazy">
-      </figure>
-    </div>
-  </section>
-
-  <!-- ═══════════ 本を開く（演出） ═══════════ -->
-  <section class="openbook" id="openbook" data-zone="dusk">
-    <div class="openbook-glow" aria-hidden="true"></div>
-    <svg class="openbook-icon" viewBox="0 0 200 150" aria-hidden="true">
-      <!-- 開いた本 -->
-      <path d="M100 36 C76 22 44 22 22 30 L22 120 C44 112 76 112 100 126 Z"
-            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M100 36 C124 22 156 22 178 30 L178 120 C156 112 124 112 100 126 Z"
-            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <line x1="100" y1="36" x2="100" y2="126" stroke="currentColor" stroke-width="3"/>
-      <!-- ページの行 -->
-      <path d="M38 48 C58 43 76 44 92 52 M38 64 C58 59 76 60 92 68 M38 80 C58 75 76 76 92 84"
-            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
-      <path d="M162 48 C142 43 124 44 108 52 M162 64 C142 59 124 60 108 68 M162 80 C142 75 124 76 108 84"
-            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
-    </svg>
-    <p class="openbook-line reveal" data-i18n="openbook.line">それでは、本を開きましょう</p>
-    <p class="openbook-sub reveal" data-i18n="openbook.sub">ゆっくり、ひと呼吸おいて</p>
-  </section>
-
-  <!-- ═══════════ ルナすろーす（紹介） ═══════════ -->
-  <section class="section luna" id="luna" data-zone="dusk">
-    <div class="container split">
-      <figure class="luna-fig reveal">
-        <img src="assets/img/luna_closeup.jpg" alt="ルナすろーす" loading="lazy">
-      </figure>
-      <div class="luna-text">
-        <h2 class="h2">
-          <span data-i18n="luna.name">ルナすろーす</span>
-          <small class="name-note" data-i18n="luna.note">（なまえは、まだ仮のもの）</small>
-        </h2>
-        <div class="poem reveal">
-          <p data-i18n="luna.body1">ルナすろーすは、導き手でも先生でもありません。あなたの分身であり、かつての——いまも途上の——わたし自身です。</p>
-          <p data-i18n="luna.body3">夜ごと、ひとつずつ。道の途中を、ただ歩いています。</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ═══════════ 新章 ── 絵本シリーズ（カウントダウン） ═══════════ -->
@@ -168,6 +106,68 @@
       <p class="kicker gold" data-i18n="archive.kicker">これまでの作品</p>
       <p class="section-note" data-i18n="archive.note">この図書館にたどり着くまでの、小さな映像たち。</p>
       <div class="reel-grid" id="reelGrid"><!-- JSで生成 --></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 図書館について（入り口） ═══════════ -->
+  <section class="section concept" id="concept" data-zone="night">
+    <div class="container narrow">
+      <p class="kicker" data-i18n="concept.kicker">図書館について</p>
+      <div class="poem reveal">
+        <p data-i18n="concept.line1">一日のおわり。</p>
+        <p data-i18n="concept.line2">灯りをひとつ落として、ページをめくる。</p>
+      </div>
+      <div class="poem reveal">
+        <p data-i18n="concept.line3">ここは、眠りの前にひらく小さな図書館。</p>
+        <p class="poem-em" data-i18n="concept.line4">絵本のかたちをした、瞑想の時間です。</p>
+      </div>
+      <div class="poem reveal">
+        <p data-i18n="concept.line5">目に見えるものだけが、世界のすべてじゃない。</p>
+        <p data-i18n="concept.line6">ナマケモノの歩く速さで、</p>
+        <p data-i18n="concept.line7">「見えない世界」のページを、いっしょにめくっていきます。</p>
+      </div>
+      <figure class="concept-fig reveal">
+        <img src="assets/img/world_light.jpg" alt="木漏れ日の参道を歩くルナすろーす" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══════════ 本を開く（演出） ═══════════ -->
+  <section class="openbook" id="openbook" data-zone="night">
+    <div class="openbook-glow" aria-hidden="true"></div>
+    <svg class="openbook-icon" viewBox="0 0 200 150" aria-hidden="true">
+      <!-- 開いた本 -->
+      <path d="M100 36 C76 22 44 22 22 30 L22 120 C44 112 76 112 100 126 Z"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 36 C124 22 156 22 178 30 L178 120 C156 112 124 112 100 126 Z"
+            fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="100" y1="36" x2="100" y2="126" stroke="currentColor" stroke-width="3"/>
+      <!-- ページの行 -->
+      <path d="M38 48 C58 43 76 44 92 52 M38 64 C58 59 76 60 92 68 M38 80 C58 75 76 76 92 84"
+            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+      <path d="M162 48 C142 43 124 44 108 52 M162 64 C142 59 124 60 108 68 M162 80 C142 75 124 76 108 84"
+            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+    </svg>
+    <p class="openbook-line reveal" data-i18n="openbook.line">それでは、本を開きましょう</p>
+    <p class="openbook-sub reveal" data-i18n="openbook.sub">ゆっくり、ひと呼吸おいて</p>
+  </section>
+
+  <!-- ═══════════ ルナすろーす（紹介） ═══════════ -->
+  <section class="section luna" id="luna" data-zone="night">
+    <div class="container split">
+      <figure class="luna-fig reveal">
+        <img src="assets/img/luna_closeup.jpg" alt="ルナすろーす" loading="lazy">
+      </figure>
+      <div class="luna-text">
+        <h2 class="h2">
+          <span data-i18n="luna.name">ルナすろーす</span>
+          <small class="name-note" data-i18n="luna.note">（なまえは、まだ仮のもの）</small>
+        </h2>
+        <div class="poem reveal">
+          <p data-i18n="luna.body1">ルナすろーすは、導き手でも先生でもありません。あなたの分身であり、かつての——いまも途上の——わたし自身です。</p>
+          <p data-i18n="luna.body3">夜ごと、ひとつずつ。道の途中を、ただ歩いています。</p>
+        </div>
+      </div>
     </div>
   </section>
 
