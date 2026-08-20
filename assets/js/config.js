@@ -89,18 +89,33 @@ const CONFIG = {
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
   episodes: [
     {
+      num: "第 9 夜",
+      titleJa: "形のないもの",
+      titleEn: "What Has No Shape",
+      date: "2026.8.21 20:00",
+      dateISO: "2026-08-21T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/形のないもの_poster.png",
+      noteJa: "風にも、時間にも、安心にも、かたちはない。形のないものは、形のあるものを通して、この世界に現れている。",
+      noteEn: "Wind, time, ease — none of them have a shape. What has no form still arrives, through the things that do.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=pLDvGH-xvlU",
+        spotify: ""
+      }
+    },
+    {
       num: "第 8 夜",
       titleJa: "罪状：ひと休み",
       titleEn: "The Crime of Resting",
       date: "2026.8.14 20:00",
       dateISO: "2026-08-14T20:00:00+09:00",
-      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      status: "live",   // 2026-08-14 配信済み。Spotify個別URLは取得後に追記
       poster: "assets/img/罪状：ひと休み_poster.png",
       noteJa: "ひと休みしただけで、なぜか罪悪感に襲われる。責める声や、かばう声は、どこから聞こえているのだろう。",
       noteEn: "You only stopped to rest, and still the guilt arrives. The voice that accuses, the voice that defends — where are they coming from?",
       links: {
         youtube: "https://www.youtube.com/watch?v=FKNc_hmrNzk",
-        spotify: ""
+        spotify: "https://open.spotify.com/episode/6h6eW29KkdUCOTr6GH5yT2"
       }
     },
     {
@@ -115,7 +130,7 @@ const CONFIG = {
       noteEn: "There are nights when you no longer know what to do. It only means the question hasn't found its words yet.",
       links: {
         youtube: "https://www.youtube.com/watch?v=1qm7Yz85BKw",
-        spotify: ""
+        spotify: "https://open.spotify.com/episode/1T2wnAbkqaSsI1gdcwYcLk"
       }
     },
     {
@@ -130,7 +145,7 @@ const CONFIG = {
       noteEn: "Choose only the destination, and let the river choose the way. The current is already opening the path that needs the least effort.",
       links: {
         youtube: "https://www.youtube.com/watch?v=Q7TBwL6EhMk",
-        spotify: ""
+        spotify: "https://open.spotify.com/episode/4Lk63laaJakF0hbsUlaE9w"
       }
     },
     {
@@ -145,7 +160,7 @@ const CONFIG = {
       noteEn: "Choosing your story needs no one's permission. You are already worth it.",
       links: {
         youtube: "https://www.youtube.com/watch?v=V3r1ewH2F8M",
-        spotify: ""
+        spotify: "https://open.spotify.com/episode/5PS1osFAg2T69qThJTuw2T"
       }
     },
     {
@@ -160,7 +175,7 @@ const CONFIG = {
       noteEn: "Even the futures that haven't happened yet are already there. All that's left is to read them.",
       links: {
         youtube: "https://www.youtube.com/watch?v=yntzAahG6zw",
-        spotify: ""
+        spotify: "https://open.spotify.com/episode/2dHbP97Y9zH5z8odowYDUV"
       }
     },
     {
