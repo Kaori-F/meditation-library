@@ -87,20 +87,36 @@ const CONFIG = {
   //     ※dateISO を過ぎたエピソードは status が "soon" のままでも自動で「配信中」表示になる。
   //       手で "live" に書き換える必要はない（書いてもよい。その場合は日時に関係なく常に配信中）。
   //   noteJa/noteEn: 「始まります」枠に出る紹介ひとこと（1〜2文・キャラ名は書かない）
+  //   links: エピソードカードのリンク先。カードは1つのリンクなので飛び先は1つだけ。
+  //     main.js が youtube を優先するため、**Spotifyの個別URLはここでは使われない**。
+  //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
+    {
+      num: "第 10 夜",
+      titleJa: "船を降りずに",
+      titleEn: "Without Leaving the Boat",
+      date: "2026.8.28 20:00",
+      dateISO: "2026-08-28T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/船を降りずに_poster.png",
+      noteJa: "波の中にいるあいだは、その波が海のすべてに見える。けれど、波の向こうにも海はある。",
+      noteEn: "While you are inside the wave, the wave looks like the whole sea. Yet beyond it, the sea goes on.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=lx8SzmIyjOc"
+      }
+    },
     {
       num: "第 9 夜",
       titleJa: "形のないもの",
       titleEn: "What Has No Shape",
       date: "2026.8.21 20:00",
       dateISO: "2026-08-21T20:00:00+09:00",
-      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      status: "live",   // 2026-08-21 配信済み。Spotify個別URLは取得後に配信リンク集へ追記
       poster: "assets/img/形のないもの_poster.png",
       noteJa: "形のないものは、形のあるものを通して、この世界に現れている。",
       noteEn: "What has no form still arrives, through the things that do.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=pLDvGH-xvlU",
-        spotify: ""
+        youtube: "https://www.youtube.com/watch?v=pLDvGH-xvlU"
       }
     },
     {
@@ -114,8 +130,7 @@ const CONFIG = {
       noteJa: "ひと休みしただけで、なぜか罪悪感に襲われる。責める声や、かばう声は、どこから聞こえているのだろう。",
       noteEn: "You only stopped to rest, and still the guilt arrives. The voice that accuses, the voice that defends — where are they coming from?",
       links: {
-        youtube: "https://www.youtube.com/watch?v=FKNc_hmrNzk",
-        spotify: "https://open.spotify.com/episode/6h6eW29KkdUCOTr6GH5yT2"
+        youtube: "https://www.youtube.com/watch?v=FKNc_hmrNzk"
       }
     },
     {
@@ -129,8 +144,7 @@ const CONFIG = {
       noteJa: "どうしたらいいのか、わからなくなる夜がある。それはまだ、問いが言葉になっていないだけ。",
       noteEn: "There are nights when you no longer know what to do. It only means the question hasn't found its words yet.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=1qm7Yz85BKw",
-        spotify: "https://open.spotify.com/episode/1T2wnAbkqaSsI1gdcwYcLk"
+        youtube: "https://www.youtube.com/watch?v=1qm7Yz85BKw"
       }
     },
     {
@@ -144,8 +158,7 @@ const CONFIG = {
       noteJa: "行き先だけ決めて、道筋は川にまかせる。いちばん力のいらない方へ、流れは道をひらいている。",
       noteEn: "Choose only the destination, and let the river choose the way. The current is already opening the path that needs the least effort.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=Q7TBwL6EhMk",
-        spotify: "https://open.spotify.com/episode/4Lk63laaJakF0hbsUlaE9w"
+        youtube: "https://www.youtube.com/watch?v=Q7TBwL6EhMk"
       }
     },
     {
@@ -159,8 +172,7 @@ const CONFIG = {
       noteJa: "その一冊を選ぶのに、誰かの許可はいらない。わたしには、その価値がある。",
       noteEn: "Choosing your story needs no one's permission. You are already worth it.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=V3r1ewH2F8M",
-        spotify: "https://open.spotify.com/episode/5PS1osFAg2T69qThJTuw2T"
+        youtube: "https://www.youtube.com/watch?v=V3r1ewH2F8M"
       }
     },
     {
@@ -174,8 +186,7 @@ const CONFIG = {
       noteJa: "起きていない未来さえ、もう、そこにある。読むのは、これから。",
       noteEn: "Even the futures that haven't happened yet are already there. All that's left is to read them.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=yntzAahG6zw",
-        spotify: "https://open.spotify.com/episode/2dHbP97Y9zH5z8odowYDUV"
+        youtube: "https://www.youtube.com/watch?v=yntzAahG6zw"
       }
     },
     {
@@ -189,8 +200,7 @@ const CONFIG = {
       noteJa: "低くかがんで、近づくほど、見えてくる世界がある。境目は、いつのまにか薄くなる。",
       noteEn: "The lower you crouch, the closer you draw, the more the world reveals. The boundary quietly fades.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=i8rELgYDdaw",
-        spotify: ""
+        youtube: "https://www.youtube.com/watch?v=i8rELgYDdaw"
       }
     },
     {
@@ -204,8 +214,7 @@ const CONFIG = {
       noteJa: "うすい、と思ったその味は、ほんとうに、なにもなかったのでしょうか。今夜も一冊、そっと置いていきます。",
       noteEn: "Was that faint taste really nothing at all? Tonight, another little book is quietly placed.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=IPiHmzuTPwA",
-        spotify: "https://open.spotify.com/episode/6HjNXRZlikDBt10NspFhkK"
+        youtube: "https://www.youtube.com/watch?v=IPiHmzuTPwA"
       }
     },
     {
@@ -219,8 +228,7 @@ const CONFIG = {
       noteJa: "皿を洗うように、心の濁りも、すこしずつ。",
       noteEn: "Like washing the dishes, the heart clears little by little.",
       links: {
-        youtube: "https://www.youtube.com/watch?v=Ir_riNbuaUU",
-        spotify: "https://open.spotify.com/episode/3iI0etzaUFyDZlqmtlKifx"
+        youtube: "https://www.youtube.com/watch?v=Ir_riNbuaUU"
       }
     },
     {
@@ -232,8 +240,7 @@ const CONFIG = {
       status: "live",
       poster: "assets/img/ep01_true_self.png",
       links: {
-        youtube: "https://www.youtube.com/watch?v=J_7NGNCLyXA",
-        spotify: "https://open.spotify.com/episode/0jM89IkRBKRCm1HIKn6RAu"
+        youtube: "https://www.youtube.com/watch?v=J_7NGNCLyXA"
       }
     }
     /* 追加例（新しい夜はこの形で配列の先頭に）：
@@ -247,7 +254,7 @@ const CONFIG = {
       poster: "assets/img/◯◯_poster.png",
       noteJa: "（紹介ひとこと）",
       noteEn: "(One-line note)",
-      links: { youtube: "https://...", spotify: "" } // Spotify個別URLは配信後に追記
+      links: { youtube: "https://..." } // 配信後にYouTubeの動画URLを入れる
     },
     */
   ],
