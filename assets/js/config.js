@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 11 夜",
+      titleJa: "青い影",
+      titleEn: "The Blue Shadow",
+      date: "2026.9.4 20:00",
+      dateISO: "2026-09-04T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/青い影_poster.png",
+      noteJa: "笛が音を出せるのは、中がからっぽだから。通り抜けていくものがあるとき、そこは先に空いている。",
+      noteEn: "A flute can sing because it is empty inside. Where something passes through, the space was opened first.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=bi4fYnToNJ8"
+      }
+    },
+    {
       num: "第 10 夜",
       titleJa: "船を降りずに",
       titleEn: "Without Leaving the Boat",
