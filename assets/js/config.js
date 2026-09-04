@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 12 夜",
+      titleJa: "和魂",
+      titleEn: "Nigi-mitama — The Harmonizing Spirit",
+      date: "2026.9.11 20:00",
+      dateISO: "2026-09-11T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/和魂_poster.png",
+      noteJa: "どれも必要な知らせなのに、いちどに届いて、何も伝わらない。どの声も消さずに、違うまま響き合わせていく働きがある。",
+      noteEn: "Every voice matters, yet all arrive at once and nothing gets through. There is a work that silences none of them, and lets them resonate as they are.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=p-LJXeLuM9I"
+      }
+    },
+    {
       num: "第 11 夜",
       titleJa: "青い影",
       titleEn: "The Blue Shadow",
