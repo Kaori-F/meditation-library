@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 13 夜",
+      titleJa: "幸魂",
+      titleEn: "Saki-mitama — The Nurturing Spirit",
+      date: "2026.9.18 20:00",
+      dateISO: "2026-09-18T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/幸魂_poster.png",
+      noteJa: "何も起こらない日がつづくと、続けている意味のほうが先に見えなくなる。数えずに通いつづけた手が、やがていくつもの実をつける。",
+      noteEn: "When nothing happens for days, it is the reason to continue that fades first. Hands that kept returning without counting are the ones that fill with fruit.",
+      links: {
+        // YouTube個別URLは予約投稿のあとに追記する（公開パックの担当）
+      }
+    },
+    {
       num: "第 12 夜",
       titleJa: "和魂",
       titleEn: "Nigi-mitama — The Harmonizing Spirit",
