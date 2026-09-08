@@ -102,7 +102,7 @@ const CONFIG = {
       noteJa: "何も起こらない日がつづくと、続けている意味のほうが先に見えなくなる。数えずに通いつづけた手が、やがていくつもの実をつける。",
       noteEn: "When nothing happens for days, it is the reason to continue that fades first. Hands that kept returning without counting are the ones that fill with fruit.",
       links: {
-        // YouTube個別URLは予約投稿のあとに追記する（公開パックの担当）
+        youtube: "https://www.youtube.com/watch?v=E9p69D4-t2k"
       }
     },
     {
