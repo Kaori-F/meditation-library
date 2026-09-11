@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 14 夜",
+      titleJa: "奇魂",
+      titleEn: "Kushi-mitama — The Connecting Spirit",
+      date: "2026.9.25 20:00",
+      dateISO: "2026-09-25T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/奇魂_poster.png",
+      noteJa: "どれだけ探しても、進む道が見つからない夜がある。答えは隠れているのではなく、まだむすばれていないだけなのかもしれない。",
+      noteEn: "Some nights, no matter how hard you search, no path appears. Perhaps the answer is not hidden at all. It simply has not been tied together yet.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=tVOszHiICzE"
+      }
+    },
+    {
       num: "第 13 夜",
       titleJa: "幸魂",
       titleEn: "Saki-mitama — The Nurturing Spirit",
