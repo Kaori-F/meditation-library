@@ -69,9 +69,22 @@
     return ep.dateISO ? Date.now() >= new Date(ep.dateISO).getTime() : false;
   }
 
-  /* ---------- 日付・タイトルの差し込み（最新エピソード＝episodes先頭から自動生成） ---------- */
+  /* ---------- トップに出すエピソード ---------- */
+  // 「次に配信されるもの」＝まだ公開されていない回のうち、dateISO がいちばん近いもの。
+  // ストックを何本先まで積んでも、トップとカウントダウンは直近の配信に合う（2026-09-11）。
+  // 以前は episodes 先頭（＝いちばん先の回）を出していたため、今夜配信の回を飛ばして
+  // 2週先の日付を数えていた。予定の回がひとつもなければ、最新の回（先頭）を「配信中」で出す。
+  function featuredEpisode() {
+    const eps = CONFIG.episodes || [];
+    const upcoming = eps
+      .filter(ep => ep.dateISO && !isLive(ep))
+      .sort((a, b) => new Date(a.dateISO) - new Date(b.dateISO));
+    return upcoming[0] || eps[0];
+  }
+
+  /* ---------- 日付・タイトルの差し込み（featuredEpisode から自動生成） ---------- */
   function renderMeta() {
-    const latest = CONFIG.episodes && CONFIG.episodes[0];
+    const latest = featuredEpisode();
     if (!latest) return;
     const live = isLive(latest);
     const numJa = (latest.num || "").replace(/\s+/g, "");        // "第2夜"
@@ -151,9 +164,12 @@
   }, { threshold: 0.18 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-  /* ---------- カウントダウン（最新エピソードの dateISO へ向けて） ---------- */
-  const cdLatest = CONFIG.episodes && CONFIG.episodes[0];
-  const target = new Date((cdLatest && cdLatest.dateISO) || CONFIG.premiereDate).getTime();
+  /* ---------- カウントダウン（次に配信される回の dateISO へ向けて） ---------- */
+  function cdTarget() {
+    const ep = featuredEpisode();
+    return new Date((ep && ep.dateISO) || CONFIG.premiereDate).getTime();
+  }
+  let target = cdTarget();
   const elD = document.getElementById("cdDays");
   const elH = document.getElementById("cdHours");
   const elM = document.getElementById("cdMins");
@@ -164,7 +180,16 @@
   function pad(n) { return String(n).padStart(2, "0"); }
 
   function tick() {
-    const diff = target - Date.now();
+    let diff = target - Date.now();
+    if (diff <= 0) {
+      // 開いたまま配信時刻をまたいだら、次に予定されている回へ数え直す
+      const next = cdTarget();
+      if (next > Date.now()) {
+        target = next;
+        diff = target - Date.now();
+        renderMeta();
+      }
+    }
     if (diff <= 0) {
       cdWrap.hidden = true;
       // 「新章が、はじまりました」は出さない（2026-08-03）。
