@@ -92,6 +92,18 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 15 夜",
+      titleJa: "荒魂",
+      titleEn: "Ara-mitama — The Rousing Spirit",
+      date: "2026.10.2 20:00",
+      dateISO: "2026-10-02T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/荒魂_poster.png",
+      noteJa: "踏み出したいのに、怖くて足が止まる日がある。恐れが消えてから動くのではなく、恐れを抱えたまま踏み出したとき、内側の力が動きだす。",
+      noteEn: "Some days you long to step forward, yet fear holds your feet still. The strength within does not wait for fear to leave. It rises when you step forward, fear and all.",
+      links: {}
+    },
+    {
       num: "第 14 夜",
       titleJa: "奇魂",
       titleEn: "Kushi-mitama — The Connecting Spirit",
