@@ -101,7 +101,9 @@ const CONFIG = {
       poster: "assets/img/荒魂_poster.png",
       noteJa: "踏み出したいのに、怖くて足が止まる日がある。恐れが消えてから動くのではなく、恐れを抱えたまま踏み出したとき、内側の力が動きだす。",
       noteEn: "Some days you long to step forward, yet fear holds your feet still. The strength within does not wait for fear to leave. It rises when you step forward, fear and all.",
-      links: {}
+      links: {
+        youtube: "https://www.youtube.com/watch?v=xKB2o6S0eDE"
+      }
     },
     {
       num: "第 14 夜",
