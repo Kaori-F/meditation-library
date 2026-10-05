@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 16 夜",
+      titleJa: "精魂",
+      titleEn: "Kuwashi-mitama — The Unifying Spirit",
+      date: "2026.10.9 20:00",
+      dateISO: "2026-10-09T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/精魂_poster.png",
+      noteJa: "やりたいことは目の前にあるのに、なぜか眺めているだけの日がある。ひとつずつ船を運んできた四つの力を、小さな鼓動が、ひとつに束ねる。",
+      noteEn: "Some days, what you want is right in front of you, and yet you only watch it from afar. The four powers that carried the ship one at a time are gathered into one by a small heartbeat.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=NCzWGu9H6JY"
+      }
+    },
+    {
       num: "第 15 夜",
       titleJa: "荒魂",
       titleEn: "Ara-mitama — The Rousing Spirit",
