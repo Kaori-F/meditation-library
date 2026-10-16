@@ -92,6 +92,20 @@ const CONFIG = {
   //     Spotifyの個別URLは 00_master/配信リンク集.md が正（2026-08-20に重複を解消）
   episodes: [
     {
+      num: "第 17 夜",
+      titleJa: "氷の花",
+      titleEn: "Flowers of Ice",
+      date: "2026.10.16 20:00",
+      dateISO: "2026-10-16T20:00:00+09:00",
+      status: "soon",   // 予約中。dateISO を過ぎれば自動で「配信中」表示になる（手で live にしなくてよい）
+      poster: "assets/img/氷の花_poster.png",
+      noteJa: "「わたしには、無理」と思うとき、意識は何を照らしているのだろう。数えきれない可能性の中から、受け取りたいものを選ぶ。",
+      noteEn: "When we think “That’s impossible for me,” what is our awareness shining on? Among countless possibilities, we choose what we wish to receive.",
+      links: {
+        youtube: "https://www.youtube.com/watch?v=AFXif-G7LMA"
+      }
+    },
+    {
       num: "第 16 夜",
       titleJa: "精魂",
       titleEn: "Kuwashi-mitama — The Unifying Spirit",
