@@ -357,6 +357,27 @@ const CONFIG = {
     */
   ],
 
+  // ---- 番外編（夜数に入らない回）----
+  // 絵本だな（episodes）とは別の棚に並ぶ。トップとカウントダウンの対象にはならない。
+  // 【重要】新しい番外編は、episodes と同じく配列の「先頭」に追加する。
+  //   dateISO を過ぎるまでは「配信予定」、過ぎたら自動で「配信中」になる（episodes と同じ考え方）。
+  //   1件もなければ、棚ごと表示されない。
+  specials: [
+    {
+      titleJa: "休館日のお知らせ",
+      titleEn: "Closed for a Little While",
+      date: "2026.10.23 20:00",
+      dateISO: "2026-10-23T20:00:00+09:00",
+      status: "soon",   // dateISO を過ぎれば自動で「配信中」表示になる
+      poster: "assets/img/休館日のお知らせ_poster.jpg",
+      noteJa: "瞑想図書館って、なに？ 秋の土用のあいだ、新しい絵本はお休みします。",
+      noteEn: "What is the Meditation Library? During Doyō, the quiet weeks before the season turns, new picture books will take a short rest.",
+      links: {
+        youtube: "https://youtu.be/EKlgwsiK2cg"
+      }
+    }
+  ],
+
   // ---- これまでの作品（アーカイブ）----
   archive: [
     {

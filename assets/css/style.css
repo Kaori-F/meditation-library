@@ -375,6 +375,19 @@ a.episode-card:hover { border-color: var(--gold); transform: translateY(-3px); }
 }
 .shelf-toggle:hover, .shelf-toggle:focus-visible { border-color: var(--gold); color: var(--gold); }
 
+/* ---------- 番外編（絵本だなと同じカードを、別の棚に） ---------- */
+.specials { color: var(--moon); }
+.specials[hidden] { display: none; }
+/* 件数が少なくても左に寄らず、中央に並ぶように（auto-fit で空の列をつくらない） */
+.specials-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 360px));
+  justify-content: center;
+}
+.special-note {
+  font-family: var(--serif); font-size: .8rem; line-height: 1.8;
+  color: var(--moon-soft); margin-top: .6rem;
+}
+
 /* ---------- ショーリール ---------- */
 .showreel { color: var(--moon); }
 .reel-grid {

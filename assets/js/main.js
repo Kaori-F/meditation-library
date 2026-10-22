@@ -23,6 +23,7 @@
     renderMeta();
     renderListen();
     renderEpisodes();
+    renderSpecials();
     renderArchive();
     renderCreatorLinks();
     renderSupport();
@@ -289,6 +290,38 @@
       document.getElementById("episodes").scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
+
+  /* ---------- 番外編（夜数に入らない回） ---------- */
+  // 絵本だなとは別の棚。カードの形は同じで、「第◯夜」の代わりに「番外編」と出す。
+  // featuredEpisode() は episodes しか見ないので、トップとカウントダウンには影響しない。
+  function renderSpecials() {
+    const sec = document.getElementById("specials");
+    const grid = document.getElementById("specialsGrid");
+    if (!sec || !grid) return;
+    const items = CONFIG.specials || [];
+    grid.innerHTML = "";
+    if (!items.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    items.forEach(sp => {
+      const live = isLive(sp);
+      const url = sp.links && (sp.links.youtube || sp.links.spotify);
+      const tag = url ? "a" : "div";
+      const card = document.createElement(tag);
+      card.className = "episode-card special-card" + (live ? " is-live" : "");
+      if (url) { card.href = url; card.target = "_blank"; card.rel = "noopener"; }
+      const note = lang === "ja" ? (sp.noteJa || "") : (sp.noteEn || sp.noteJa || "");
+      card.innerHTML =
+        '<div class="thumb"><img src="' + sp.poster + '" alt="" loading="lazy"></div>' +
+        '<div class="episode-meta">' +
+          '<p class="episode-num">' + t("specials.label") + "</p>" +
+          '<p class="episode-title">' + (lang === "ja" ? sp.titleJa : (sp.titleEn || sp.titleJa)) + "</p>" +
+          (note ? '<p class="special-note">' + note + "</p>" : "") +
+          '<p class="episode-date">' + (sp.date || "") + "</p>" +
+          (live ? "" : '<span class="episode-badge">' + t("episodes.soon") + "</span>") +
+        "</div>";
+      grid.appendChild(card);
+    });
+  }
 
   /* ---------- これまでの作品（アーカイブ） ---------- */
   function renderArchive() {

@@ -65,6 +65,11 @@ const I18N = {
     "episodes.more": "これまでの夜を、ひらく",
     "episodes.less": "とじる",
 
+    // 番外編（文言は仮。Kaoriさんがあとで直す前提）
+    "specials.kicker": "番外編",
+    "specials.note": "絵本のあいまに、ときどき灯る、小さなお知らせ。",
+    "specials.label": "番外編",
+
     // これまでの作品（アーカイブ）
     "archive.kicker": "これまでの作品",
     "archive.note": "この図書館にたどり着くまでの、小さな映像たち。",
@@ -151,6 +156,10 @@ const I18N = {
     "episodes.live": "Now streaming",
     "episodes.more": "Open the earlier nights",
     "episodes.less": "Close",
+
+    "specials.kicker": "Extras",
+    "specials.note": "Small notes between the picture books.",
+    "specials.label": "Extra",
 
     "archive.kicker": "Earlier Works",
     "archive.note": "Small films from the road that led to this library.",
